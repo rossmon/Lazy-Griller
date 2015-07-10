@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  SlideOutNavigation
-//
-//  Created by James Frost on 03/08/2014.
-//  Copyright (c) 2014 James Frost. All rights reserved.
-//
 
 import UIKit
 
@@ -13,9 +6,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+    {
+        println("TEST")
+    
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        
+
         let containerViewController = ContainerViewController()
         
         window!.rootViewController = containerViewController

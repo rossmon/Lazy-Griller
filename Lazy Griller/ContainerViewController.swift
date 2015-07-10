@@ -24,8 +24,8 @@ class ContainerViewController: UIViewController {
             showShadowFortempViewController(shouldShowShadow)
         }
     }
-    var rightViewController: SidePanelViewController?
-    let tempPanelExpandedOffset: CGFloat = 60
+    var sidePanelViewController: SidePanelViewController?
+    var tempPanelExpandedOffset: CGFloat =  150
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +34,14 @@ class ContainerViewController: UIViewController {
         tempViewController = UIStoryboard.tempViewController()
         tempViewController.delegate = self
         
+        //tempPanelExpandedOffset = CGFloat(bound.width!)
         // wrap the tempViewController in a navigation controller, so we can push views to it
         // and display bar button items in the navigation bar
-//        tempNavigationController = UINavigationController(rootViewController: tempViewController)
-//        view.addSubview(tempNavigationController.view)
-//        addChildViewController(tempNavigationController)
-//        
-//        tempNavigationController.didMoveToParentViewController(self)
+        //tempNavigationController = UINavigationController(rootViewController: tempViewController)
+        view.addSubview(tempViewController.view)
+        //addChildViewController(tempNavigationController)
+        
+        //tempNavigationController.didMoveToParentViewController(self)
     }
     
 }
@@ -48,8 +49,8 @@ class ContainerViewController: UIViewController {
 private extension UIStoryboard {
     class func mainStoryboard() -> UIStoryboard { return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()) }
     
-    class func rightViewController() -> SidePanelViewController? {
-        return mainStoryboard().instantiateViewControllerWithIdentifier("RightViewController") as? SidePanelViewController
+    class func sidePanelViewController() -> SidePanelViewController? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("SidePanelViewController") as? SidePanelViewController
     }
     
     class func tempViewController() -> TempViewController? {
@@ -79,11 +80,12 @@ extension ContainerViewController: TempViewControllerDelegate {
     }
     
     func addRightPanelViewController() {
-        if (rightViewController == nil) {
-            rightViewController = UIStoryboard.rightViewController()
-            rightViewController!.settings = SettingTab.allDogs()
-            
-            addChildSidePanelController(rightViewController!)
+        if (sidePanelViewController == nil) {
+            sidePanelViewController = UIStoryboard.sidePanelViewController()
+            sidePanelViewController!.settings = SettingTab.menuItems()
+            println(sidePanelViewController!.settings[0].title)
+            println(sidePanelViewController!.settings[0].image)
+            addChildSidePanelController(sidePanelViewController!)
         }
     }
     
@@ -96,8 +98,8 @@ extension ContainerViewController: TempViewControllerDelegate {
             animatetempPanelXPosition(targetPosition: 0) { _ in
                 self.currentState = .BothCollapsed
                 
-                self.rightViewController!.view.removeFromSuperview()
-                self.rightViewController = nil;
+                self.sidePanelViewController!.view.removeFromSuperview()
+                self.sidePanelViewController = nil;
             }
         }
     }

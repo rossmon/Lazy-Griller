@@ -18,7 +18,6 @@ class TempViewController: UIViewController {
     
     @IBOutlet weak private var imageView: UIImageView!
     @IBOutlet weak private var titleLabel: UILabel!
-    @IBOutlet weak private var creatorLabel: UILabel!
     
     var delegate: TempViewControllerDelegate?
     
@@ -34,7 +33,6 @@ extension TempViewController: SidePanelViewControllerDelegate {
     func settingSelected(setting: SettingTab) {
         imageView.image = setting.image
         titleLabel.text = setting.title
-        creatorLabel.text = setting.creator
         
         delegate?.collapseSidePanels?()
     }

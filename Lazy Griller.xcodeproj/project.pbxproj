@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9180A8771B50362600C1CFB9 /* TopPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180A8761B50362600C1CFB9 /* TopPanelViewController.swift */; };
 		91A7978B1B4F4241001D5448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A7978A1B4F4241001D5448 /* AppDelegate.swift */; };
 		91A797901B4F4241001D5448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91A7978E1B4F4241001D5448 /* Main.storyboard */; };
 		91A797921B4F4241001D5448 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91A797911B4F4241001D5448 /* Images.xcassets */; };
@@ -15,7 +16,11 @@
 		91A797AB1B4F4303001D5448 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A797AA1B4F4303001D5448 /* ContainerViewController.swift */; };
 		91A797AD1B4F4372001D5448 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A797AC1B4F4372001D5448 /* TempViewController.swift */; };
 		91A797AF1B4F44C6001D5448 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A797AE1B4F44C6001D5448 /* SidePanelViewController.swift */; };
-		91A797B11B4F455A001D5448 /* SettingTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A797B01B4F455A001D5448 /* SettingTabs.swift */; };
+		91A797B11B4F455A001D5448 /* SettingTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A797B01B4F455A001D5448 /* SettingTab.swift */; };
+		91A797B31B4F4E82001D5448 /* Line Chart-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 91A797B21B4F4E82001D5448 /* Line Chart-30.png */; };
+		91A797B51B4F4E8B001D5448 /* Settings-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 91A797B41B4F4E8B001D5448 /* Settings-30.png */; };
+		91A797B71B4F4E96001D5448 /* Thermometer-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 91A797B61B4F4E96001D5448 /* Thermometer-30.png */; };
+		91A797B91B4F524F001D5448 /* Menu-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 91A797B81B4F524F001D5448 /* Menu-30.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9180A8761B50362600C1CFB9 /* TopPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopPanelViewController.swift; sourceTree = "<group>"; };
 		91A797851B4F4241001D5448 /* Lazy Griller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lazy Griller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A797891B4F4241001D5448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91A7978A1B4F4241001D5448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +47,11 @@
 		91A797AA1B4F4303001D5448 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		91A797AC1B4F4372001D5448 /* TempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
 		91A797AE1B4F44C6001D5448 /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
-		91A797B01B4F455A001D5448 /* SettingTabs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTabs.swift; sourceTree = "<group>"; };
+		91A797B01B4F455A001D5448 /* SettingTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTab.swift; sourceTree = "<group>"; };
+		91A797B21B4F4E82001D5448 /* Line Chart-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Line Chart-30.png"; sourceTree = "<group>"; };
+		91A797B41B4F4E8B001D5448 /* Settings-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-30.png"; sourceTree = "<group>"; };
+		91A797B61B4F4E96001D5448 /* Thermometer-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thermometer-30.png"; sourceTree = "<group>"; };
+		91A797B81B4F524F001D5448 /* Menu-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu-30.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +97,8 @@
 				91A797AA1B4F4303001D5448 /* ContainerViewController.swift */,
 				91A797AC1B4F4372001D5448 /* TempViewController.swift */,
 				91A797AE1B4F44C6001D5448 /* SidePanelViewController.swift */,
-				91A797B01B4F455A001D5448 /* SettingTabs.swift */,
+				9180A8761B50362600C1CFB9 /* TopPanelViewController.swift */,
+				91A797B01B4F455A001D5448 /* SettingTab.swift */,
 				91A7978E1B4F4241001D5448 /* Main.storyboard */,
 				91A797911B4F4241001D5448 /* Images.xcassets */,
 				91A797931B4F4241001D5448 /* LaunchScreen.xib */,
@@ -99,6 +110,10 @@
 		91A797881B4F4241001D5448 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				91A797B21B4F4E82001D5448 /* Line Chart-30.png */,
+				91A797B41B4F4E8B001D5448 /* Settings-30.png */,
+				91A797B81B4F524F001D5448 /* Menu-30.png */,
+				91A797B61B4F4E96001D5448 /* Thermometer-30.png */,
 				91A797891B4F4241001D5448 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -202,7 +217,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				91A797901B4F4241001D5448 /* Main.storyboard in Resources */,
+				91A797B71B4F4E96001D5448 /* Thermometer-30.png in Resources */,
 				91A797951B4F4241001D5448 /* LaunchScreen.xib in Resources */,
+				91A797B51B4F4E8B001D5448 /* Settings-30.png in Resources */,
+				91A797B31B4F4E82001D5448 /* Line Chart-30.png in Resources */,
+				91A797B91B4F524F001D5448 /* Menu-30.png in Resources */,
 				91A797921B4F4241001D5448 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,9 +241,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				91A797AD1B4F4372001D5448 /* TempViewController.swift in Sources */,
+				9180A8771B50362600C1CFB9 /* TopPanelViewController.swift in Sources */,
 				91A797AF1B4F44C6001D5448 /* SidePanelViewController.swift in Sources */,
 				91A797AB1B4F4303001D5448 /* ContainerViewController.swift in Sources */,
-				91A797B11B4F455A001D5448 /* SettingTabs.swift in Sources */,
+				91A797B11B4F455A001D5448 /* SettingTab.swift in Sources */,
 				91A7978B1B4F4241001D5448 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +445,7 @@
 				91A797A61B4F4241001D5448 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		91A797A71B4F4241001D5448 /* Build configuration list for PBXNativeTarget "Lazy GrillerTests" */ = {
 			isa = XCConfigurationList;
@@ -433,6 +454,7 @@
 				91A797A91B4F4241001D5448 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

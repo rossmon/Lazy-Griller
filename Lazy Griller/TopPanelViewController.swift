@@ -9,24 +9,30 @@
 import UIKit
 
 @objc
-protocol SidePanelViewControllerDelegate {
+protocol TopPanelViewControllerDelegate {
     func settingSelected(setting: SettingTab)
 }
 
-class SidePanelViewController: UIViewController {
+class TopPanelViewController: UIViewController {
     
-
+    
+    @IBOutlet weak var graphButton: UIButton!
+    @IBAction func graphButtonPressed(sender: AnyObject) {
+    }
+    
+    @IBOutlet weak var tempButton: UIButton!
+    @IBAction func tempButtonPressed(sender: AnyObject) {
+    }
+    
+    @IBOutlet weak var settingButton: UIButton!
+    @IBAction func settingButtonPressed(sender: AnyObject) {
+    }
+    
     @IBOutlet weak var tableView: UITableView!
     
     var settings: Array<SettingTab>!
     
-    var delegate: SidePanelViewControllerDelegate?
-    
-    struct TableView {
-        struct CellIdentifiers {
-            static let SettingCell = "SettingCell"
-        }
-    }
+    var delegate: TopPanelViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +44,7 @@ class SidePanelViewController: UIViewController {
 
 // MARK: Table View Data Source
 
-extension SidePanelViewController: UITableViewDataSource {
+extension TopPanelViewController: UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -58,7 +64,7 @@ extension SidePanelViewController: UITableViewDataSource {
 
 // Mark: Table View Delegate
 
-extension SidePanelViewController: UITableViewDelegate {
+extension TopPanelViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let selectedSetting = settings[indexPath.row]
@@ -67,14 +73,3 @@ extension SidePanelViewController: UITableViewDelegate {
     
 }
 
-class SettingCell: UITableViewCell {
-    
-    @IBOutlet weak var settingImageView: UIImageView!
-    @IBOutlet weak var imageNameLabel: UILabel!
-    
-    func configureForSetting(setting: SettingTab) {
-        settingImageView.image = setting.image
-        imageNameLabel.text = setting.title
-    }
-    
-}
