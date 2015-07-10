@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		91A7978B1B4F4241001D5448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A7978A1B4F4241001D5448 /* AppDelegate.swift */; };
+		91A797901B4F4241001D5448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91A7978E1B4F4241001D5448 /* Main.storyboard */; };
+		91A797921B4F4241001D5448 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91A797911B4F4241001D5448 /* Images.xcassets */; };
+		91A797951B4F4241001D5448 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A797931B4F4241001D5448 /* LaunchScreen.xib */; };
+		91A797A11B4F4241001D5448 /* Lazy_GrillerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A797A01B4F4241001D5448 /* Lazy_GrillerTests.swift */; };
+		91A797AB1B4F4303001D5448 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A797AA1B4F4303001D5448 /* ContainerViewController.swift */; };
+		91A797AD1B4F4372001D5448 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A797AC1B4F4372001D5448 /* TempViewController.swift */; };
+		91A797AF1B4F44C6001D5448 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A797AE1B4F44C6001D5448 /* SidePanelViewController.swift */; };
+		91A797B11B4F455A001D5448 /* SettingTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A797B01B4F455A001D5448 /* SettingTabs.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		91A7979B1B4F4241001D5448 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91A7977D1B4F4241001D5448 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91A797841B4F4241001D5448;
+			remoteInfo = "Lazy Griller";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		91A797851B4F4241001D5448 /* Lazy Griller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lazy Griller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91A797891B4F4241001D5448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91A7978A1B4F4241001D5448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		91A7978F1B4F4241001D5448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91A797911B4F4241001D5448 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		91A797941B4F4241001D5448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		91A7979A1B4F4241001D5448 /* Lazy GrillerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lazy GrillerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91A7979F1B4F4241001D5448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91A797A01B4F4241001D5448 /* Lazy_GrillerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lazy_GrillerTests.swift; sourceTree = "<group>"; };
+		91A797AA1B4F4303001D5448 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		91A797AC1B4F4372001D5448 /* TempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
+		91A797AE1B4F44C6001D5448 /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
+		91A797B01B4F455A001D5448 /* SettingTabs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTabs.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91A797821B4F4241001D5448 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91A797971B4F4241001D5448 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91A7977C1B4F4241001D5448 = {
+			isa = PBXGroup;
+			children = (
+				91A797871B4F4241001D5448 /* Lazy Griller */,
+				91A7979D1B4F4241001D5448 /* Lazy GrillerTests */,
+				91A797861B4F4241001D5448 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		91A797861B4F4241001D5448 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91A797851B4F4241001D5448 /* Lazy Griller.app */,
+				91A7979A1B4F4241001D5448 /* Lazy GrillerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91A797871B4F4241001D5448 /* Lazy Griller */ = {
+			isa = PBXGroup;
+			children = (
+				91A7978A1B4F4241001D5448 /* AppDelegate.swift */,
+				91A797AA1B4F4303001D5448 /* ContainerViewController.swift */,
+				91A797AC1B4F4372001D5448 /* TempViewController.swift */,
+				91A797AE1B4F44C6001D5448 /* SidePanelViewController.swift */,
+				91A797B01B4F455A001D5448 /* SettingTabs.swift */,
+				91A7978E1B4F4241001D5448 /* Main.storyboard */,
+				91A797911B4F4241001D5448 /* Images.xcassets */,
+				91A797931B4F4241001D5448 /* LaunchScreen.xib */,
+				91A797881B4F4241001D5448 /* Supporting Files */,
+			);
+			path = "Lazy Griller";
+			sourceTree = "<group>";
+		};
+		91A797881B4F4241001D5448 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				91A797891B4F4241001D5448 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		91A7979D1B4F4241001D5448 /* Lazy GrillerTests */ = {
+			isa = PBXGroup;
+			children = (
+				91A797A01B4F4241001D5448 /* Lazy_GrillerTests.swift */,
+				91A7979E1B4F4241001D5448 /* Supporting Files */,
+			);
+			path = "Lazy GrillerTests";
+			sourceTree = "<group>";
+		};
+		91A7979E1B4F4241001D5448 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				91A7979F1B4F4241001D5448 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91A797841B4F4241001D5448 /* Lazy Griller */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91A797A41B4F4241001D5448 /* Build configuration list for PBXNativeTarget "Lazy Griller" */;
+			buildPhases = (
+				91A797811B4F4241001D5448 /* Sources */,
+				91A797821B4F4241001D5448 /* Frameworks */,
+				91A797831B4F4241001D5448 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lazy Griller";
+			productName = "Lazy Griller";
+			productReference = 91A797851B4F4241001D5448 /* Lazy Griller.app */;
+			productType = "com.apple.product-type.application";
+		};
+		91A797991B4F4241001D5448 /* Lazy GrillerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91A797A71B4F4241001D5448 /* Build configuration list for PBXNativeTarget "Lazy GrillerTests" */;
+			buildPhases = (
+				91A797961B4F4241001D5448 /* Sources */,
+				91A797971B4F4241001D5448 /* Frameworks */,
+				91A797981B4F4241001D5448 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91A7979C1B4F4241001D5448 /* PBXTargetDependency */,
+			);
+			name = "Lazy GrillerTests";
+			productName = "Lazy GrillerTests";
+			productReference = 91A7979A1B4F4241001D5448 /* Lazy GrillerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91A7977D1B4F4241001D5448 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = MontagueTech;
+				TargetAttributes = {
+					91A797841B4F4241001D5448 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					91A797991B4F4241001D5448 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 91A797841B4F4241001D5448;
+					};
+				};
+			};
+			buildConfigurationList = 91A797801B4F4241001D5448 /* Build configuration list for PBXProject "Lazy Griller" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 91A7977C1B4F4241001D5448;
+			productRefGroup = 91A797861B4F4241001D5448 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91A797841B4F4241001D5448 /* Lazy Griller */,
+				91A797991B4F4241001D5448 /* Lazy GrillerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		91A797831B4F4241001D5448 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91A797901B4F4241001D5448 /* Main.storyboard in Resources */,
+				91A797951B4F4241001D5448 /* LaunchScreen.xib in Resources */,
+				91A797921B4F4241001D5448 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91A797981B4F4241001D5448 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91A797811B4F4241001D5448 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91A797AD1B4F4372001D5448 /* TempViewController.swift in Sources */,
+				91A797AF1B4F44C6001D5448 /* SidePanelViewController.swift in Sources */,
+				91A797AB1B4F4303001D5448 /* ContainerViewController.swift in Sources */,
+				91A797B11B4F455A001D5448 /* SettingTabs.swift in Sources */,
+				91A7978B1B4F4241001D5448 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91A797961B4F4241001D5448 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91A797A11B4F4241001D5448 /* Lazy_GrillerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		91A7979C1B4F4241001D5448 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91A797841B4F4241001D5448 /* Lazy Griller */;
+			targetProxy = 91A7979B1B4F4241001D5448 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		91A7978E1B4F4241001D5448 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91A7978F1B4F4241001D5448 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		91A797931B4F4241001D5448 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91A797941B4F4241001D5448 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		91A797A21B4F4241001D5448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		91A797A31B4F4241001D5448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		91A797A51B4F4241001D5448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Lazy Griller/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		91A797A61B4F4241001D5448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Lazy Griller/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		91A797A81B4F4241001D5448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Lazy GrillerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lazy Griller.app/Lazy Griller";
+			};
+			name = Debug;
+		};
+		91A797A91B4F4241001D5448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Lazy GrillerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lazy Griller.app/Lazy Griller";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91A797801B4F4241001D5448 /* Build configuration list for PBXProject "Lazy Griller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91A797A21B4F4241001D5448 /* Debug */,
+				91A797A31B4F4241001D5448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91A797A41B4F4241001D5448 /* Build configuration list for PBXNativeTarget "Lazy Griller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91A797A51B4F4241001D5448 /* Debug */,
+				91A797A61B4F4241001D5448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		91A797A71B4F4241001D5448 /* Build configuration list for PBXNativeTarget "Lazy GrillerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91A797A81B4F4241001D5448 /* Debug */,
+				91A797A91B4F4241001D5448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91A7977D1B4F4241001D5448 /* Project object */;
+}
