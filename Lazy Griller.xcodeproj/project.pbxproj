@@ -11,6 +11,7 @@
 		910ADA971B5C35C8007B0809 /* flame180.png in Resources */ = {isa = PBXBuildFile; fileRef = 910ADA951B5C35C8007B0809 /* flame180.png */; };
 		910ADA9A1B5C3A90007B0809 /* flame76.png in Resources */ = {isa = PBXBuildFile; fileRef = 910ADA981B5C3A90007B0809 /* flame76.png */; };
 		910ADA9B1B5C3A90007B0809 /* flame152.png in Resources */ = {isa = PBXBuildFile; fileRef = 910ADA991B5C3A90007B0809 /* flame152.png */; };
+		910ADA9D1B5C3C96007B0809 /* TempButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 910ADA9C1B5C3C96007B0809 /* TempButton.png */; };
 		9180A8771B50362600C1CFB9 /* TopPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180A8761B50362600C1CFB9 /* TopPanelViewController.swift */; };
 		9180A8791B531EF600C1CFB9 /* TempReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180A8781B531EF600C1CFB9 /* TempReading.swift */; };
 		9180A87B1B532A8600C1CFB9 /* flame.png in Resources */ = {isa = PBXBuildFile; fileRef = 9180A87A1B532A8600C1CFB9 /* flame.png */; };
@@ -46,6 +47,7 @@
 		910ADA951B5C35C8007B0809 /* flame180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flame180.png; path = Images.xcassets/flame180.png; sourceTree = "<group>"; };
 		910ADA981B5C3A90007B0809 /* flame76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flame76.png; sourceTree = "<group>"; };
 		910ADA991B5C3A90007B0809 /* flame152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flame152.png; sourceTree = "<group>"; };
+		910ADA9C1B5C3C96007B0809 /* TempButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TempButton.png; sourceTree = "<group>"; };
 		9180A8761B50362600C1CFB9 /* TopPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopPanelViewController.swift; sourceTree = "<group>"; };
 		9180A8781B531EF600C1CFB9 /* TempReading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempReading.swift; sourceTree = "<group>"; };
 		9180A87A1B532A8600C1CFB9 /* flame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flame.png; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				91A797B21B4F4E82001D5448 /* Line Chart-30.png */,
 				910ADA981B5C3A90007B0809 /* flame76.png */,
+				910ADA9C1B5C3C96007B0809 /* TempButton.png */,
 				910ADA991B5C3A90007B0809 /* flame152.png */,
 				91A797B41B4F4E8B001D5448 /* Settings-30.png */,
 				910ADA941B5C35C8007B0809 /* flame120.png */,
@@ -243,6 +246,7 @@
 				91A797901B4F4241001D5448 /* Main.storyboard in Resources */,
 				9180A87B1B532A8600C1CFB9 /* flame.png in Resources */,
 				910ADA961B5C35C8007B0809 /* flame120.png in Resources */,
+				910ADA9D1B5C3C96007B0809 /* TempButton.png in Resources */,
 				91A797B71B4F4E96001D5448 /* Thermometer-30.png in Resources */,
 				91A797951B4F4241001D5448 /* LaunchScreen.xib in Resources */,
 				910ADA9A1B5C3A90007B0809 /* flame76.png in Resources */,
