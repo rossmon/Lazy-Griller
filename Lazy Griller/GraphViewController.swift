@@ -56,27 +56,39 @@ class GraphViewController: UIViewController {
     
     func setupGraph() {
         if probe1Readings.count > 1 {
-            graphViewP1?.setPoints(sortTempsByAscendingTime(probe1Readings))
+            let p1SortedReadings = sortTempsByAscendingTime(probe1Readings)
+            graphViewP1?.setPoints(p1SortedReadings)
         }
-        println(probe2Readings.count)
         if probe2Readings.count > 1 {
-            graphViewP2?.setPoints(sortTempsByAscendingTime(probe2Readings))
+            let p2SortedReadings = sortTempsByAscendingTime(probe2Readings)
+            graphViewP2?.setPoints(p2SortedReadings)
         }
         
         if let value = graphViewP1 {
             if p1MaxTemp != nil {
-                p1MaxTemp.text = "\(maxElement(value.probeTempPoints))"
+                if value.probeTempPoints.count > 0 {
+                    p1MaxTemp.text = "\(maxElement(value.probeTempPoints))"
+                }
             }
             if p1MinTemp != nil {
-                p1MinTemp.text = "\(minElement(value.probeTempPoints))"
+                if value.probeTempPoints.count > 0 {
+                    p1MinTemp.text = "\(minElement(value.probeTempPoints))"
+                }
             }
+            
+            
         }
         if let value = graphViewP2 {
             if p2MaxTemp != nil {
-                p2MaxTemp.text = "\(maxElement(value.probeTempPoints))"
+                if value.probeTempPoints.count > 0 {
+                    p2MaxTemp.text = "\(maxElement(value.probeTempPoints))"
+                }
+
             }
             if p2MinTemp != nil {
-                p2MinTemp.text = "\(minElement(value.probeTempPoints))"
+                if value.probeTempPoints.count > 0 {
+                    p2MinTemp.text = "\(minElement(value.probeTempPoints))"
+                }
             }
         }
         

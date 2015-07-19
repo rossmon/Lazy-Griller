@@ -6,6 +6,7 @@ protocol TempViewControllerDelegate {
     optional func toggleTopPanelTemps()
     optional func collapseTopPanelTemps()
     optional func changeViewTemps(menu: String)
+    optional func handlePanGesture(recognizer: UIPanGestureRecognizer)
 }
 
 extension NSData {
@@ -89,18 +90,22 @@ class TempViewController: UIViewController {
         delegate?.toggleTopPanelTemps?()
     }
     
+    @IBAction func panHandle(sender: UIPanGestureRecognizer) {
+        delegate?.handlePanGesture?(sender)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
      
         checkForNewTemps()
-        NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: Selector("checkForNewTemps"), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("checkForNewTemps"), userInfo: nil, repeats: true)
     }
     
     //Struct for program variables. Should this be a class?
     struct MyVariables {
         static var htmldata = ""
         static var myDevice = "Device1"
-        static var graphTimeHistory = 30
+        static var graphTimeHistory = 3
         static var url = NSURL(string: "http://wifi-grill.herokuapp.com/temps")
     }
     
@@ -270,7 +275,6 @@ class TempViewController: UIViewController {
     
     func checkForNewTemps(){
         get_temps()
-        sleep(2)
         
         let components = MyVariables.htmldata.componentsSeparatedByString("<td>")
         
@@ -370,6 +374,8 @@ class TempViewController: UIViewController {
         }
         
         var cutOffTime = mostRecentTime?.addHours(-1*MyVariables.graphTimeHistory)
+        println(mostRecentTime)
+        println(cutOffTime)
         var probe1GraphReadings: [TempReading] = [TempReading]()
         var probe2GraphReadings: [TempReading] = [TempReading]()
         
