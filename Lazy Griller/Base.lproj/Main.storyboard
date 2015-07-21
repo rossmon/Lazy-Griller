@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQa-1M-RTT">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="125"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIg-Ub-7Bq">
-                                        <rect key="frame" x="270" y="33" width="60" height="60"/>
+                                        <rect key="frame" x="270" y="38" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="0dK-sp-keo"/>
                                             <constraint firstAttribute="height" constant="60" id="I0G-Yr-tTy"/>
@@ -34,7 +34,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xL6-fY-dix">
-                                        <rect key="frame" x="160" y="33" width="60" height="60"/>
+                                        <rect key="frame" x="160" y="38" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="5kx-iz-cE4"/>
                                             <constraint firstAttribute="height" constant="60" id="7A3-u3-82X"/>
@@ -46,8 +46,26 @@
                                             <action selector="tempButtonPressed:" destination="sRu-u7-cDg" eventType="touchUpInside" id="Csv-wb-Nbk"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRd-Ha-V0r">
+                                        <rect key="frame" x="173" y="103" width="34" height="21"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Graph" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khq-GD-NcB">
+                                        <rect key="frame" x="283" y="103" width="33" height="21"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqy-ME-cLr">
+                                        <rect key="frame" x="389" y="103" width="43" height="21"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYz-Hc-HhZ">
-                                        <rect key="frame" x="380" y="33" width="60" height="60"/>
+                                        <rect key="frame" x="380" y="38" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="494-F8-UIq"/>
                                             <constraint firstAttribute="width" constant="60" id="CoT-Bj-sYL"/>
@@ -59,39 +77,21 @@
                                             <action selector="settingButtonPressed:" destination="sRu-u7-cDg" eventType="touchUpInside" id="xOh-gr-rDj"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRd-Ha-V0r">
-                                        <rect key="frame" x="174" y="98" width="34" height="21"/>
-                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="15"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Graph" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khq-GD-NcB">
-                                        <rect key="frame" x="283" y="98" width="33" height="21"/>
-                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="15"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqy-ME-cLr">
-                                        <rect key="frame" x="389" y="98" width="43" height="21"/>
-                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="15"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="backgroundColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="kYz-Hc-HhZ" firstAttribute="top" secondItem="pQa-1M-RTT" secondAttribute="top" constant="38" id="4jm-om-qBB"/>
                                     <constraint firstItem="kYz-Hc-HhZ" firstAttribute="leading" secondItem="EIg-Ub-7Bq" secondAttribute="trailing" constant="50" id="6J7-qP-17C"/>
                                     <constraint firstItem="khq-GD-NcB" firstAttribute="top" secondItem="EIg-Ub-7Bq" secondAttribute="bottom" constant="5" id="6K8-iv-ToP"/>
                                     <constraint firstItem="khq-GD-NcB" firstAttribute="centerX" secondItem="EIg-Ub-7Bq" secondAttribute="centerX" constant="-0.5" id="DBn-4X-UR8"/>
-                                    <constraint firstAttribute="centerY" secondItem="EIg-Ub-7Bq" secondAttribute="centerY" constant="-0.5" id="Hp5-aB-W3O"/>
                                     <constraint firstItem="QRd-Ha-V0r" firstAttribute="top" secondItem="xL6-fY-dix" secondAttribute="bottom" constant="5" id="aLD-WS-Zle"/>
-                                    <constraint firstAttribute="centerY" secondItem="xL6-fY-dix" secondAttribute="centerY" id="aOi-wh-Fv9"/>
-                                    <constraint firstAttribute="centerY" secondItem="kYz-Hc-HhZ" secondAttribute="centerY" constant="-0.5" id="f9O-w8-82N"/>
+                                    <constraint firstItem="EIg-Ub-7Bq" firstAttribute="top" secondItem="pQa-1M-RTT" secondAttribute="top" constant="38" id="fyT-se-Kjq"/>
                                     <constraint firstItem="rqy-ME-cLr" firstAttribute="centerX" secondItem="kYz-Hc-HhZ" secondAttribute="centerX" constant="0.5" id="gNU-On-RsN"/>
-                                    <constraint firstAttribute="height" constant="125" id="iuD-ys-tJR"/>
+                                    <constraint firstAttribute="height" constant="150" id="iuD-ys-tJR"/>
                                     <constraint firstItem="QRd-Ha-V0r" firstAttribute="centerX" secondItem="xL6-fY-dix" secondAttribute="centerX" constant="0.5" id="jBM-i2-tov"/>
                                     <constraint firstAttribute="centerX" secondItem="EIg-Ub-7Bq" secondAttribute="centerX" id="mXV-Ad-78m"/>
                                     <constraint firstItem="rqy-ME-cLr" firstAttribute="top" secondItem="kYz-Hc-HhZ" secondAttribute="bottom" constant="5" id="vFg-x9-hav"/>
+                                    <constraint firstItem="xL6-fY-dix" firstAttribute="top" secondItem="pQa-1M-RTT" secondAttribute="top" constant="38" id="voE-Da-TVU"/>
                                     <constraint firstItem="EIg-Ub-7Bq" firstAttribute="leading" secondItem="xL6-fY-dix" secondAttribute="trailing" constant="50" id="y6e-vj-q50"/>
                                 </constraints>
                             </view>
@@ -107,6 +107,7 @@
                         <outlet property="graphButton" destination="EIg-Ub-7Bq" id="VMx-g2-H5b"/>
                         <outlet property="settingButton" destination="kYz-Hc-HhZ" id="hAV-ws-BoS"/>
                         <outlet property="tempButton" destination="xL6-fY-dix" id="L2r-BY-Kc0"/>
+                        <outlet property="topView" destination="pQa-1M-RTT" id="C1e-b7-WHD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1tV-19-XCI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -137,7 +138,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LazyGriller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMK-IW-e9u">
                                 <rect key="frame" x="253" y="28" width="95" height="35"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flame.png" translatesAutoresizingMaskIntoConstraints="NO" id="n1Y-BG-IMj">
@@ -157,11 +158,14 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="probe1ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FPl-Bi-2Z8"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Probe 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwc-sK-zCB">
                                         <rect key="frame" x="126" y="203" width="49" height="25"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -187,11 +191,14 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="probe2ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t8J-7J-kLm"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Probe 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ti-8D-uHT">
                                         <rect key="frame" x="126" y="203" width="49" height="25"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -307,7 +314,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="bV3-Xv-Jas" firstAttribute="leading" secondItem="loZ-Ak-ZUg" secondAttribute="leading" constant="8" id="2NO-dV-YFT"/>
                                     <constraint firstItem="uTv-TN-fyQ" firstAttribute="top" secondItem="loZ-Ak-ZUg" secondAttribute="top" constant="8" id="6aF-st-71s"/>
@@ -345,7 +352,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LazyGriller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBB-6w-1Qd">
                                 <rect key="frame" x="253" y="28" width="95" height="35"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="riF-ei-h0p" customClass="GraphView" customModule="Lazy_Griller" customModuleProvider="target">
@@ -406,7 +413,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="EOd-yb-6Fg" firstAttribute="top" secondItem="lRH-bV-teV" secondAttribute="bottom" constant="2" id="0E6-1R-JhD"/>
                                     <constraint firstAttribute="trailing" secondItem="dGr-DR-joC" secondAttribute="trailing" constant="8" id="8wy-ns-Pwj"/>
@@ -506,10 +513,10 @@
             </objects>
             <point key="canvasLocation" x="305" y="1767"/>
         </scene>
-        <!--View Controller-->
+        <!--Alarm View Controller-->
         <scene sceneID="dqb-eU-M3H">
             <objects>
-                <viewController id="hYV-jz-46u" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlarmViewController" id="hYV-jz-46u" customClass="AlarmViewController" customModule="Lazy_Griller" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Vq-z5-3nV"/>
                         <viewControllerLayoutGuide type="bottom" id="hW3-i0-qWn"/>
@@ -517,14 +524,46 @@
                     <view key="view" contentMode="scaleToFill" id="EKM-N0-SAp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ch0-Yg-dcm">
+                                <rect key="frame" x="16" y="28" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4of-Cp-Eyd"/>
+                                    <constraint firstAttribute="width" constant="30" id="cbz-hP-wK3"/>
+                                </constraints>
+                                <state key="normal" image="Back-30.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backPressed:" destination="hYV-jz-46u" eventType="touchUpInside" id="OAw-zp-dLb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ViewLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwy-yK-0Pd">
+                                <rect key="frame" x="268" y="28" width="89" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.77647058820000003" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ch0-Yg-dcm" firstAttribute="centerY" secondItem="Pwy-yK-0Pd" secondAttribute="centerY" constant="-1.5" id="7yY-Il-A5D"/>
+                            <constraint firstItem="ch0-Yg-dcm" firstAttribute="leading" secondItem="EKM-N0-SAp" secondAttribute="leadingMargin" id="A6M-B4-xGv"/>
+                            <constraint firstItem="ch0-Yg-dcm" firstAttribute="top" secondItem="3Vq-z5-3nV" secondAttribute="bottom" constant="8" id="HDr-96-YWV"/>
+                            <constraint firstAttribute="centerX" secondItem="Pwy-yK-0Pd" secondAttribute="centerX" constant="-12" id="XsH-hr-clu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="alarmLabel" destination="Pwy-yK-0Pd" id="6xH-bW-1Ls"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aC9-vh-Na9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="945" y="347"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Back-30.png" width="30" height="30"/>
         <image name="Menu-30.png" width="30" height="30"/>
         <image name="TempButton2.png" width="500" height="500"/>
         <image name="TempButton2Graph.png" width="500" height="500"/>

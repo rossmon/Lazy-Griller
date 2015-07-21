@@ -1,3 +1,12 @@
+//
+//  TempViewController.swift
+//  Lazy Griller
+//
+//  Created by Ross Montague on 7/12/15.
+//  Copyright (c) 2015 MontagueTech. All rights reserved.
+//
+
+
 import UIKit
 
 @objc
@@ -115,8 +124,34 @@ class TempViewController: UIViewController {
     var p1Time: NSDate?
     var p2Time: NSDate?
     
+    var alarmViewController: AlarmViewController!
+    
+    @IBAction func probe1ButtonPressed(sender: AnyObject) {
+        alarmViewController = UIStoryboard.alarmViewController()
+        alarmViewController!.delegate = self
+        
+        view.addSubview(alarmViewController!.view)
+        
+        if alarmViewController != nil{
+            alarmViewController.setLabel("Probe 1 Alarm Temperature")
+        }
+    }
+    
+    @IBAction func probe2ButtonPressed(sender: AnyObject) {
+        alarmViewController = UIStoryboard.alarmViewController()
+        alarmViewController!.delegate = self
+        
+        view.addSubview(alarmViewController!.view)
+        
+        if alarmViewController != nil{
+            alarmViewController.setLabel("Probe 2 Alarm Temperature")
+        }
+    }
+    
+    
     @IBOutlet weak var probe1Label: UIButton!
     @IBOutlet weak var probe2Label: UIButton!
+    
     
     /**
         Grabs temperature readings from the server located at the url addess.
@@ -254,10 +289,6 @@ class TempViewController: UIViewController {
             if var label = probe1Label {
                 label.setTitle(probe1readingString, forState: .Normal)
             }
-            /*
-            if var label = probe1LastTemp {
-                label.text = "\(probe1reading)"
-            }*/
         }
         
         if probe2Temp != nil{
@@ -266,10 +297,6 @@ class TempViewController: UIViewController {
             if var label = probe2Label {
                 label.setTitle(probe2readingString, forState: .Normal)
             }
-            /*
-            if var label = probe2LastTemp {
-                label.text = "\(probe2reading)"
-            }*/
         }
     }
     
@@ -374,8 +401,8 @@ class TempViewController: UIViewController {
         }
         
         var cutOffTime = mostRecentTime?.addHours(-1*MyVariables.graphTimeHistory)
-        println(mostRecentTime)
-        println(cutOffTime)
+        //println(mostRecentTime)
+        //println(cutOffTime)
         var probe1GraphReadings: [TempReading] = [TempReading]()
         var probe2GraphReadings: [TempReading] = [TempReading]()
         
@@ -404,5 +431,24 @@ extension TempViewController: TopPanelViewControllerDelegate {
         
         delegate?.collapseTopPanelTemps?()
         delegate?.changeViewTemps?(menu)
+    }
+}
+
+extension TempViewController: AlarmViewControllerDelegate {
+    func backSelected() {
+        if alarmViewController != nil {
+            self.alarmViewController!.view.removeFromSuperview()
+            self.alarmViewController = nil
+        }
+    }
+    
+    
+}
+
+private extension UIStoryboard {
+    class func mainStoryboard() -> UIStoryboard { return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()) }
+    
+    class func alarmViewController() -> AlarmViewController? {
+            return mainStoryboard().instantiateViewControllerWithIdentifier("AlarmViewController") as? AlarmViewController
     }
 }

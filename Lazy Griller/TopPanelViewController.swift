@@ -23,6 +23,7 @@ class TopPanelViewController: UIViewController {
         delegate?.settingSelected("settings")
     }
     
+    @IBOutlet weak var topView: UIView!
     var delegate: TopPanelViewControllerDelegate?
     
     override func viewDidLoad() {

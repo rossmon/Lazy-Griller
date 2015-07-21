@@ -1,3 +1,12 @@
+//
+//  ContainerViewController.swift
+//  Lazy Griller
+//
+//  Created by Ross Montague on 7/12/15.
+//  Copyright (c) 2015 MontagueTech. All rights reserved.
+//
+
+
 import UIKit
 import QuartzCore
 
@@ -38,7 +47,7 @@ class ContainerViewController: UIViewController {
     
     
     
-    var tempPanelExpandedOffset: CGFloat =  125
+    var tempPanelExpandedOffset: CGFloat =  150
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,32 +124,32 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
             
         case .Changed:
             if currentView == .Temperatures {
-                if recognizer.translationInView(view).y < 125 {
+                if recognizer.translationInView(view).y < 150 {
                     tempViewController.view.center.y = tempViewController.view.center.y + recognizer.translationInView(view).y
                     recognizer.setTranslation(CGPointZero, inView: view)
                 }
                 else {
-                    tempViewController.view.center.y = tempViewController.view.center.y + 125
+                    tempViewController.view.center.y = tempViewController.view.center.y + 150
                     recognizer.setTranslation(CGPointZero, inView: view)
                 }
             }
             else if currentView == .Graphs {
-                if recognizer.translationInView(view).y < 125 {
+                if recognizer.translationInView(view).y < 150 {
                     graphViewController.view.center.y = tempViewController.view.center.y + recognizer.translationInView(view).y
                     recognizer.setTranslation(CGPointZero, inView: view)
                 }
                 else {
-                    graphViewController.view.center.y = tempViewController.view.center.y + 125
+                    graphViewController.view.center.y = tempViewController.view.center.y + 150
                     recognizer.setTranslation(CGPointZero, inView: view)
                 }
             }
             else if currentView == .Settings {
-                if recognizer.translationInView(view).y < 125 {
+                if recognizer.translationInView(view).y < 150 {
                     settingViewController.view.center.y = tempViewController.view.center.y + recognizer.translationInView(view).y
                     recognizer.setTranslation(CGPointZero, inView: view)
                 }
                 else {
-                    settingViewController.view.center.y = tempViewController.view.center.y + 125
+                    settingViewController.view.center.y = tempViewController.view.center.y + 150
                     recognizer.setTranslation(CGPointZero, inView: view)
                 }
             }
@@ -187,9 +196,6 @@ extension ContainerViewController: TempViewControllerDelegate {
     func addTopPanelViewControllerTemps() {
         if (topPanelViewController == nil) {
             topPanelViewController = UIStoryboard.topPanelViewController()
-            //topPanelViewController!.settings = SettingTab.menuItems()
-            //println(topPanelViewController!.settings[0].title)
-            //println(topPanelViewController!.settings[0].image)
             addChildTopPanelControllerTemps(topPanelViewController!)
         }
     }
@@ -211,13 +217,13 @@ extension ContainerViewController: TempViewControllerDelegate {
     }
     
     func animatetempPanelXPositionTemps(#targetPosition: CGFloat, completion: ((Bool) -> Void)! = nil) {
-        UIView.animateWithDuration(0.1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseInOut, animations: {
+        UIView.animateWithDuration(0.2, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseInOut, animations: {
             self.tempViewController.view.frame.origin.x = targetPosition
             }, completion: completion)
     }
     
     func animatetempPanelYPositionTemps(#targetPosition: CGFloat, completion: ((Bool) -> Void)! = nil) {
-        UIView.animateWithDuration(0.1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseInOut, animations: {
+        UIView.animateWithDuration(0.2, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseInOut, animations: {
             self.tempViewController.view.frame.origin.y = targetPosition
             }, completion: completion)
     }
@@ -324,9 +330,6 @@ extension ContainerViewController: GraphViewControllerDelegate {
     func addTopPanelViewControllerGraph() {
         if (topPanelViewController == nil) {
             topPanelViewController = UIStoryboard.topPanelViewController()
-            //topPanelViewController!.settings = SettingTab.menuItems()
-            //println(topPanelViewController!.settings[0].title)
-            //println(topPanelViewController!.settings[0].image)
             addChildTopPanelControllerGraph(topPanelViewController!)
         }
     }
@@ -348,13 +351,13 @@ extension ContainerViewController: GraphViewControllerDelegate {
     }
     
     func animatetempPanelXPositionGraph(#targetPosition: CGFloat, completion: ((Bool) -> Void)! = nil) {
-        UIView.animateWithDuration(0.1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseInOut, animations: {
+        UIView.animateWithDuration(0.2, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseInOut, animations: {
             self.graphViewController.view.frame.origin.x = targetPosition
             }, completion: completion)
     }
     
     func animatetempPanelYPositionGraph(#targetPosition: CGFloat, completion: ((Bool) -> Void)! = nil) {
-        UIView.animateWithDuration(0.1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseInOut, animations: {
+        UIView.animateWithDuration(0.2, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseInOut, animations: {
             self.graphViewController.view.frame.origin.y = targetPosition
             }, completion: completion)
     }
@@ -462,9 +465,6 @@ extension ContainerViewController: SettingViewControllerDelegate {
     func addTopPanelViewControllerSetting() {
         if (topPanelViewController == nil) {
             topPanelViewController = UIStoryboard.topPanelViewController()
-            //topPanelViewController!.settings = SettingTab.menuItems()
-            //println(topPanelViewController!.settings[0].title)
-            //println(topPanelViewController!.settings[0].image)
             addChildTopPanelControllerSetting(topPanelViewController!)
         }
     }
@@ -486,13 +486,13 @@ extension ContainerViewController: SettingViewControllerDelegate {
     }
     
     func animatetempPanelXPositionSetting(#targetPosition: CGFloat, completion: ((Bool) -> Void)! = nil) {
-        UIView.animateWithDuration(0.1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseInOut, animations: {
+        UIView.animateWithDuration(0.2, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseInOut, animations: {
             self.settingViewController.view.frame.origin.x = targetPosition
             }, completion: completion)
     }
     
     func animatetempPanelYPositionSetting(#targetPosition: CGFloat, completion: ((Bool) -> Void)! = nil) {
-        UIView.animateWithDuration(0.1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseInOut, animations: {
+        UIView.animateWithDuration(0.2, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseInOut, animations: {
             self.settingViewController.view.frame.origin.y = targetPosition
             }, completion: completion)
     }

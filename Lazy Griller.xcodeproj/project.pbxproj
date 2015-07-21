@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9101D1D01B5DB0D100454A93 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9101D1CF1B5DB0D100454A93 /* AlarmViewController.swift */; };
+		9101D1D21B5DB25900454A93 /* Back-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 9101D1D11B5DB25900454A93 /* Back-30.png */; };
+		9101D1D41B5DE9F100454A93 /* Alarms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9101D1D31B5DE9F100454A93 /* Alarms.swift */; };
 		910ADA961B5C35C8007B0809 /* flame120.png in Resources */ = {isa = PBXBuildFile; fileRef = 910ADA941B5C35C8007B0809 /* flame120.png */; };
 		910ADA971B5C35C8007B0809 /* flame180.png in Resources */ = {isa = PBXBuildFile; fileRef = 910ADA951B5C35C8007B0809 /* flame180.png */; };
 		910ADA9A1B5C3A90007B0809 /* flame76.png in Resources */ = {isa = PBXBuildFile; fileRef = 910ADA981B5C3A90007B0809 /* flame76.png */; };
@@ -47,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9101D1CF1B5DB0D100454A93 /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		9101D1D11B5DB25900454A93 /* Back-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back-30.png"; sourceTree = "<group>"; };
+		9101D1D31B5DE9F100454A93 /* Alarms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarms.swift; sourceTree = "<group>"; };
 		910ADA941B5C35C8007B0809 /* flame120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flame120.png; path = Images.xcassets/flame120.png; sourceTree = "<group>"; };
 		910ADA951B5C35C8007B0809 /* flame180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flame180.png; path = Images.xcassets/flame180.png; sourceTree = "<group>"; };
 		910ADA981B5C3A90007B0809 /* flame76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flame76.png; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 			children = (
 				91A7978A1B4F4241001D5448 /* AppDelegate.swift */,
 				91A7978E1B4F4241001D5448 /* Main.storyboard */,
+				9101D1CF1B5DB0D100454A93 /* AlarmViewController.swift */,
 				91A797AA1B4F4303001D5448 /* ContainerViewController.swift */,
 				91A797AC1B4F4372001D5448 /* TempViewController.swift */,
 				9180A87C1B5331D100C1CFB9 /* GraphViewController.swift */,
@@ -129,6 +136,7 @@
 				9180A8761B50362600C1CFB9 /* TopPanelViewController.swift */,
 				9180A8781B531EF600C1CFB9 /* TempReading.swift */,
 				91A8BEA51B535BE600826815 /* RecentReadings.swift */,
+				9101D1D31B5DE9F100454A93 /* Alarms.swift */,
 				91A797911B4F4241001D5448 /* Images.xcassets */,
 				91A797931B4F4241001D5448 /* LaunchScreen.xib */,
 				91A797881B4F4241001D5448 /* Supporting Files */,
@@ -146,6 +154,7 @@
 				910ADA981B5C3A90007B0809 /* flame76.png */,
 				910ADA9C1B5C3C96007B0809 /* TempButton.png */,
 				910ADA991B5C3A90007B0809 /* flame152.png */,
+				9101D1D11B5DB25900454A93 /* Back-30.png */,
 				91A797B41B4F4E8B001D5448 /* Settings-30.png */,
 				910ADA941B5C35C8007B0809 /* flame120.png */,
 				912994341B5C46BC00C646F2 /* TempButton2Setting.png */,
@@ -266,6 +275,7 @@
 				91A797B51B4F4E8B001D5448 /* Settings-30.png in Resources */,
 				91A797B31B4F4E82001D5448 /* Line Chart-30.png in Resources */,
 				910ADA9B1B5C3A90007B0809 /* flame152.png in Resources */,
+				9101D1D21B5DB25900454A93 /* Back-30.png in Resources */,
 				912994391B5C4AFD00C646F2 /* TempButton2Temp.png in Resources */,
 				91A797B91B4F524F001D5448 /* Menu-30.png in Resources */,
 				91A797921B4F4241001D5448 /* Images.xcassets in Resources */,
@@ -294,9 +304,11 @@
 				91A797AD1B4F4372001D5448 /* TempViewController.swift in Sources */,
 				9180A8771B50362600C1CFB9 /* TopPanelViewController.swift in Sources */,
 				9180A87D1B5331D100C1CFB9 /* GraphViewController.swift in Sources */,
+				9101D1D01B5DB0D100454A93 /* AlarmViewController.swift in Sources */,
 				91A797AB1B4F4303001D5448 /* ContainerViewController.swift in Sources */,
 				91A8BEA21B534DE300826815 /* SettingViewController.swift in Sources */,
 				91A7978B1B4F4241001D5448 /* AppDelegate.swift in Sources */,
+				9101D1D41B5DE9F100454A93 /* Alarms.swift in Sources */,
 				91A8BEA41B5352D300826815 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
