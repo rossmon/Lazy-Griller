@@ -378,7 +378,7 @@ class TempViewController: UIViewController {
         
         RecentReading.sharedInstance.setRecentReadings(probe1GraphReadings, p2Readings: probe2GraphReadings)
         
-        Alarms.sharedInstance.turnOnProbe1Alarm()
+        //Alarms.sharedInstance.turnOnProbe1Alarm()
         
         if Alarms.sharedInstance.alarm1IsOn() {
             if let recReading = RecentReading.sharedInstance.getLastTemp(1) {

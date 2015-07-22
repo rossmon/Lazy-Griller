@@ -70,6 +70,41 @@ class AlarmViewController: UIViewController {
     @IBOutlet weak var noAlarmView: UIView!
     @IBOutlet weak var alarmView: UIView!
     
+    @IBAction func upPressed(sender: AnyObject) {
+        if delegate?.probeNumSelected() == 1 {
+            Alarms.sharedInstance.setProbe1Alarm(Alarms.sharedInstance.getAlarm1Temp()+1)
+            alarmTemp.text = "\(Alarms.sharedInstance.getAlarm1Temp())"
+        }
+        else {
+            Alarms.sharedInstance.setProbe2Alarm(Alarms.sharedInstance.getAlarm2Temp()+1)
+            alarmTemp.text = "\(Alarms.sharedInstance.getAlarm2Temp())"
+        }
+        
+    }
+
+    @IBAction func downPressed(sender: AnyObject) {
+        if delegate?.probeNumSelected() == 1 {
+            if Alarms.sharedInstance.getAlarm1Temp() > 0 {
+                Alarms.sharedInstance.setProbe1Alarm(Alarms.sharedInstance.getAlarm1Temp()-1)
+                alarmTemp.text = "\(Alarms.sharedInstance.getAlarm1Temp())"
+            }
+            else {
+                Alarms.sharedInstance.setProbe1Alarm(0)
+                alarmTemp.text = "0"
+            }
+        }
+        else {
+            if Alarms.sharedInstance.getAlarm2Temp() > 0 {
+                Alarms.sharedInstance.setProbe2Alarm(Alarms.sharedInstance.getAlarm2Temp()-1)
+                alarmTemp.text = "\(Alarms.sharedInstance.getAlarm2Temp())"
+            }
+            else {
+                Alarms.sharedInstance.setProbe2Alarm(0)
+                alarmTemp.text = "0"
+            }
+        }
+        
+    }
     @IBAction func counterViewTap(gesture:UITapGestureRecognizer?) {
         if (isAlarmViewShowing) {
             alarmTemp.text = "\(Alarms.sharedInstance.getAlarm1Temp())"

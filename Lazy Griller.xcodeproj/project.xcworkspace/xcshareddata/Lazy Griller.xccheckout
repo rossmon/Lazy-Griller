@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>2468AE7E-94D3-464B-B671-569F40F2AED7</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Lazy Griller</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>08E5B574ABB2939495C5EB0959EAF78E8D651973</key>
 		<string>https://github.com/rossmon/Lazy-Griller.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Lazy Griller.xcodeproj/project.xcworkspace</string>
+	<string>Lazy Griller.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>08E5B574ABB2939495C5EB0959EAF78E8D651973</key>

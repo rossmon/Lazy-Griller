@@ -545,32 +545,94 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT TEMP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMs-2G-to9">
-                                <rect key="frame" x="260" y="452" width="81" height="22"/>
+                                <rect key="frame" x="260" y="402" width="81" height="22"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-UltraLight" family="Avenir Next Condensed" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="temp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMH-tK-Xb5">
-                                <rect key="frame" x="285" y="423" width="31" height="22"/>
+                                <rect key="frame" x="285" y="373" width="31" height="22"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X40-34-7Uv" userLabel="AlarmContainer">
-                                <rect key="frame" x="150" y="91" width="300" height="300"/>
+                                <rect key="frame" x="175" y="91" width="250" height="250"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cxg-9e-DGZ" userLabel="AlarmView" customClass="UIImageView">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n13-Ek-cnB" userLabel="NoAlarmView">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TempButton2.png" translatesAutoresizingMaskIntoConstraints="NO" id="bqp-So-FG6">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlarmOffButton.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Cu-If-qGk">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="21M-gJ-DbC"/>
+                                                    <constraint firstAttribute="width" constant="250" id="QqE-dn-kX9"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm Off" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYb-fs-Af4">
+                                                <rect key="frame" x="94" y="113" width="62" height="25"/>
+                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAP TO SET ALARM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKx-mb-7Rs">
+                                                <rect key="frame" x="75" y="166" width="101" height="22"/>
+                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="centerX" secondItem="AKx-mb-7Rs" secondAttribute="centerX" id="A2l-oL-yFR"/>
+                                            <constraint firstAttribute="centerY" secondItem="PYb-fs-Af4" secondAttribute="centerY" id="CV2-61-dOJ"/>
+                                            <constraint firstAttribute="centerX" secondItem="4Cu-If-qGk" secondAttribute="centerX" id="P15-1I-AHO"/>
+                                            <constraint firstAttribute="centerX" secondItem="PYb-fs-Af4" secondAttribute="centerX" id="Wxm-k3-rax"/>
+                                            <constraint firstAttribute="centerY" secondItem="4Cu-If-qGk" secondAttribute="centerY" id="x3V-LH-yNj"/>
+                                            <constraint firstItem="AKx-mb-7Rs" firstAttribute="top" secondItem="PYb-fs-Af4" secondAttribute="bottom" constant="28" id="yYD-lT-CnN"/>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cxg-9e-DGZ" userLabel="AlarmView" customClass="UIImageView">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlarmTempDisp.png" translatesAutoresizingMaskIntoConstraints="NO" id="bqp-So-FG6">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="B3Y-cw-SRO"/>
+                                                    <constraint firstAttribute="width" constant="250" id="DQ3-37-rdE"/>
+                                                </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIe-gW-yvY" userLabel="AlarmTemp">
-                                                <rect key="frame" x="135" y="95" width="30" height="110"/>
+                                                <rect key="frame" x="110" y="70" width="30" height="110"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="80"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uv-hg-30p" userLabel="DownButton">
+                                                <rect key="frame" x="85" y="222" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="bEr-29-yUE"/>
+                                                    <constraint firstAttribute="width" constant="20" id="r6a-RW-zep"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Angle Down-50.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="downPressed:" destination="hYV-jz-46u" eventType="touchUpInside" id="VzP-Lb-noD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxQ-kM-PVW" userLabel="UpButton">
+                                                <rect key="frame" x="140" y="224" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="dqZ-lp-yEz"/>
+                                                    <constraint firstAttribute="height" constant="20" id="v8f-0m-rvU"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Angle Up-50.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="upPressed:" destination="hYV-jz-46u" eventType="touchUpInside" id="6zU-iI-3dJ"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="bqp-So-FG6" firstAttribute="top" secondItem="Cxg-9e-DGZ" secondAttribute="top" id="2FO-S6-oTm"/>
@@ -578,33 +640,13 @@
                                             <constraint firstAttribute="centerY" secondItem="bqp-So-FG6" secondAttribute="centerY" id="7x4-H3-Vnk"/>
                                             <constraint firstItem="bqp-So-FG6" firstAttribute="width" secondItem="Cxg-9e-DGZ" secondAttribute="width" id="8zQ-2o-NTc"/>
                                             <constraint firstItem="bqp-So-FG6" firstAttribute="leading" secondItem="Cxg-9e-DGZ" secondAttribute="leading" id="IIO-WY-hHf"/>
+                                            <constraint firstAttribute="bottom" secondItem="cxQ-kM-PVW" secondAttribute="bottom" constant="6" id="MEh-AC-Ryu"/>
+                                            <constraint firstAttribute="bottom" secondItem="6uv-hg-30p" secondAttribute="bottom" constant="8" id="i57-uI-EHd"/>
+                                            <constraint firstAttribute="trailing" secondItem="cxQ-kM-PVW" secondAttribute="trailing" constant="90" id="qDm-sd-efJ"/>
                                             <constraint firstAttribute="centerX" secondItem="UIe-gW-yvY" secondAttribute="centerX" id="u2p-VB-YGL"/>
                                             <constraint firstAttribute="centerX" secondItem="bqp-So-FG6" secondAttribute="centerX" id="ydu-pd-K53"/>
                                             <constraint firstItem="bqp-So-FG6" firstAttribute="height" secondItem="Cxg-9e-DGZ" secondAttribute="height" id="yjH-7j-S6X"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n13-Ek-cnB" userLabel="NoAlarmView">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TempButton2Temp.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Cu-If-qGk">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="300" id="21M-gJ-DbC"/>
-                                                    <constraint firstAttribute="width" constant="300" id="QqE-dn-kX9"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm Off" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYb-fs-Af4">
-                                                <rect key="frame" x="120" y="15" width="62" height="25"/>
-                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="18"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="centerX" secondItem="PYb-fs-Af4" secondAttribute="centerX" constant="-0.5" id="Hjg-jF-aNg"/>
-                                            <constraint firstAttribute="centerX" secondItem="4Cu-If-qGk" secondAttribute="centerX" id="P15-1I-AHO"/>
-                                            <constraint firstAttribute="centerY" secondItem="4Cu-If-qGk" secondAttribute="centerY" id="x3V-LH-yNj"/>
-                                            <constraint firstItem="4Cu-If-qGk" firstAttribute="top" secondItem="PYb-fs-Af4" secondAttribute="bottom" constant="-40" id="ynK-X8-RcG"/>
+                                            <constraint firstItem="6uv-hg-30p" firstAttribute="leading" secondItem="Cxg-9e-DGZ" secondAttribute="leading" constant="85" id="yrO-A3-JAL"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -615,11 +657,11 @@
                                     <constraint firstAttribute="height" secondItem="n13-Ek-cnB" secondAttribute="height" id="Jls-aC-XRI"/>
                                     <constraint firstItem="Cxg-9e-DGZ" firstAttribute="leading" secondItem="X40-34-7Uv" secondAttribute="leading" id="KOZ-1s-zwo"/>
                                     <constraint firstAttribute="height" secondItem="Cxg-9e-DGZ" secondAttribute="height" id="OZ5-dZ-PSd"/>
-                                    <constraint firstAttribute="height" constant="300" id="OiC-zr-7vk"/>
+                                    <constraint firstAttribute="height" constant="250" id="OiC-zr-7vk"/>
                                     <constraint firstItem="n13-Ek-cnB" firstAttribute="top" secondItem="X40-34-7Uv" secondAttribute="top" id="bVQ-al-yLk"/>
                                     <constraint firstAttribute="width" secondItem="Cxg-9e-DGZ" secondAttribute="width" id="cx3-yS-OFI"/>
                                     <constraint firstAttribute="width" secondItem="n13-Ek-cnB" secondAttribute="width" id="wS7-nM-s4j"/>
-                                    <constraint firstAttribute="width" constant="300" id="ygK-3I-zlH"/>
+                                    <constraint firstAttribute="width" constant="250" id="ygK-3I-zlH"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="eH9-Zn-2PO" appends="YES" id="A0S-d4-qvU"/>
@@ -632,7 +674,7 @@
                             <constraint firstItem="ch0-Yg-dcm" firstAttribute="leading" secondItem="EKM-N0-SAp" secondAttribute="leadingMargin" id="A6M-B4-xGv"/>
                             <constraint firstAttribute="centerX" secondItem="rMH-tK-Xb5" secondAttribute="centerX" id="B0V-RG-ibp"/>
                             <constraint firstItem="ch0-Yg-dcm" firstAttribute="top" secondItem="3Vq-z5-3nV" secondAttribute="bottom" constant="8" id="HDr-96-YWV"/>
-                            <constraint firstItem="X40-34-7Uv" firstAttribute="top" secondItem="Pwy-yK-0Pd" secondAttribute="bottom" constant="30" id="MqS-eC-NwI"/>
+                            <constraint firstAttribute="centerY" secondItem="X40-34-7Uv" secondAttribute="centerY" constant="84" id="HmK-9B-xft"/>
                             <constraint firstItem="Pwy-yK-0Pd" firstAttribute="centerY" secondItem="ch0-Yg-dcm" secondAttribute="centerY" constant="1.5" id="PzI-7W-TZD"/>
                             <constraint firstItem="rMH-tK-Xb5" firstAttribute="top" secondItem="X40-34-7Uv" secondAttribute="bottom" constant="32" id="j3O-ef-e7x"/>
                             <constraint firstItem="SMs-2G-to9" firstAttribute="top" secondItem="rMH-tK-Xb5" secondAttribute="bottom" constant="7" id="p2K-ON-S6M"/>
@@ -659,6 +701,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AlarmOffButton.png" width="500" height="500"/>
+        <image name="AlarmTempDisp.png" width="1000" height="1000"/>
+        <image name="Angle Down-50.png" width="50" height="50"/>
+        <image name="Angle Up-50.png" width="50" height="50"/>
         <image name="Back-30.png" width="30" height="30"/>
         <image name="Menu-30.png" width="30" height="30"/>
         <image name="TempButton2.png" width="500" height="500"/>

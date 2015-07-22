@@ -28,8 +28,8 @@ class Alarms {
         self.probe2Alarm = probe2AlarmTemp
     }
     init() {
-        probe1Alarm = 125
-        probe2Alarm = 150
+        probe1Alarm = 200
+        probe2Alarm = 200
     }
     
     func getAlarm1Temp()->Int {
