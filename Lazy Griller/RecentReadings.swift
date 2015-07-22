@@ -34,6 +34,22 @@ class RecentReading {
         return (probe1Temps,probe2Temps)
     }
     
+    func getLastTemp(probe: Int) -> Double? {
+        
+        var lastTemp = Double()
+        if probe == 1 {
+            if probe1Temps.count > 0 {
+                lastTemp = probe1Temps[0].temp!
+            }
+        }
+        else if probe == 2 {
+            if probe2Temps.count > 0 {
+                lastTemp = probe2Temps[0].temp!
+            }
+        }
+        return lastTemp
+    }
+    
     func setRecentReadings(p1Readings:[TempReading],p2Readings:[TempReading]) {
         self.probe1Temps = p1Readings
         self.probe2Temps = p2Readings

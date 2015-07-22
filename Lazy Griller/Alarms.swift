@@ -12,6 +12,8 @@ class Alarms {
     
     private var probe1Alarm: Int
     private var probe2Alarm: Int
+    private var probe1AlarmOn: Bool = false
+    private var probe2AlarmOn: Bool = false
     
     class var sharedInstance : Alarms {
         struct Static {
@@ -26,12 +28,15 @@ class Alarms {
         self.probe2Alarm = probe2AlarmTemp
     }
     init() {
-        probe1Alarm = Int()
-        probe2Alarm = Int()
+        probe1Alarm = 125
+        probe2Alarm = 150
     }
     
-    func getAlarmTemps()->(Int,Int) {
-        return (probe1Alarm,probe2Alarm)
+    func getAlarm1Temp()->Int {
+        return probe1Alarm
+    }
+    func getAlarm2Temp()->Int {
+        return probe2Alarm
     }
     
     func setAlarmTemps(probe1AlarmTemp: Int,probe2AlarmTemp: Int) {
@@ -45,6 +50,36 @@ class Alarms {
     
     func setProbe2Alarm(probe2AlarmTemp: Int) {
         self.probe2Alarm = probe2AlarmTemp
+    }
+    
+    func toggleProbe1Alarm() {
+        if self.probe1AlarmOn {
+            self.probe1AlarmOn = false
+        }
+        else {
+            self.probe1AlarmOn = true
+        }
+    }
+    func toggleProbe2Alarm() {
+        if self.probe2AlarmOn {
+            self.probe2AlarmOn = false
+        }
+        else {
+            self.probe2AlarmOn = true
+        }
+    }
+    func alarm1IsOn()->Bool {
+        return probe1AlarmOn
+    }
+    func alarm2IsOn()->Bool {
+        return probe2AlarmOn
+    }
+    
+    func turnOnProbe1Alarm() {
+        probe1AlarmOn = true
+    }
+    func turnOnProbe2Alarm() {
+        probe2AlarmOn = true
     }
     
 }

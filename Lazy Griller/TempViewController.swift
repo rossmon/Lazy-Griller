@@ -124,27 +124,44 @@ class TempViewController: UIViewController {
     var p1Time: NSDate?
     var p2Time: NSDate?
     
+    var probeSelected: Int = 1
+    
     var alarmViewController: AlarmViewController!
     
     @IBAction func probe1ButtonPressed(sender: AnyObject) {
+        
+        if probeSelected != 1 {
+            probeSelected = 1
+        }
         alarmViewController = UIStoryboard.alarmViewController()
         alarmViewController!.delegate = self
         
         view.addSubview(alarmViewController!.view)
         
         if alarmViewController != nil{
-            alarmViewController.setLabel("Probe 1 Alarm Temperature")
+            alarmViewController.alarmLabel.text = "Probe 1 Alarm Temperature"
+            //INSERT ASSIGNMENT OF MOST RECENT READING
+            var probe1reading = Int(round(RecentReading.sharedInstance.getLastTemp(1)!))
+            var probe1String = String(probe1reading)
+            alarmViewController.currentTemp.text = probe1String + " °F"
         }
     }
     
     @IBAction func probe2ButtonPressed(sender: AnyObject) {
+        if probeSelected != 2 {
+            probeSelected = 2
+        }
+        
         alarmViewController = UIStoryboard.alarmViewController()
         alarmViewController!.delegate = self
         
         view.addSubview(alarmViewController!.view)
         
         if alarmViewController != nil{
-            alarmViewController.setLabel("Probe 2 Alarm Temperature")
+            alarmViewController.alarmLabel.text = "Probe 2 Alarm Temperature"
+            var probe2reading = Int(round(RecentReading.sharedInstance.getLastTemp(2)!))
+            var probe2String = String(probe2reading)
+            alarmViewController.currentTemp.text = probe2String + " °F"
         }
     }
     
@@ -361,24 +378,22 @@ class TempViewController: UIViewController {
         
         RecentReading.sharedInstance.setRecentReadings(probe1GraphReadings, p2Readings: probe2GraphReadings)
         
-        //println("Probe 1 Recent Readings = " + "\(probe1GraphReadings.count)")
-        //println("Probe 2 Recent Readings = " + "\(probe2GraphReadings.count)")
+        Alarms.sharedInstance.turnOnProbe1Alarm()
         
-        /*
-        graphViewP1?.setPoints(sortTempsByAscendingTime(probe1GraphReadings))
-        graphViewP2?.setPoints(sortTempsByAscendingTime(probe2GraphReadings))
-        
-        if let value = graphViewP1 {
-            p1MaxTemp.text = "\(maxElement(graphViewP1.probeTempPoints))"
-            p1MinTemp.text = "\(minElement(graphViewP1.probeTempPoints))"
+        if Alarms.sharedInstance.alarm1IsOn() {
+            if let recReading = RecentReading.sharedInstance.getLastTemp(1) {
+                if recReading >= Double(Alarms.sharedInstance.getAlarm1Temp()) {
+                    //PLAY THAT FUNKY MUSIC
+                    println("Notification scheduled")
+                    
+                    let alertController = UIAlertController(title: "Probe 1 Alarm", message:
+                        "Temperature is over " + "\(Alarms.sharedInstance.getAlarm1Temp()) °F", preferredStyle: UIAlertControllerStyle.Alert)
+                    alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                    
+                    self.presentViewController(alertController, animated: true, completion: nil)
+                }
+            }
         }
-        if let value = graphViewP2 {
-            p2MaxTemp.text = "\(maxElement(graphViewP2.probeTempPoints))"
-            p2MinTemp.text = "\(minElement(graphViewP2.probeTempPoints))"
-        }*/
-        
-        //How to update Graph View?
-        
     }
     
     
@@ -401,8 +416,6 @@ class TempViewController: UIViewController {
         }
         
         var cutOffTime = mostRecentTime?.addHours(-1*MyVariables.graphTimeHistory)
-        //println(mostRecentTime)
-        //println(cutOffTime)
         var probe1GraphReadings: [TempReading] = [TempReading]()
         var probe2GraphReadings: [TempReading] = [TempReading]()
         
@@ -440,6 +453,11 @@ extension TempViewController: AlarmViewControllerDelegate {
             self.alarmViewController!.view.removeFromSuperview()
             self.alarmViewController = nil
         }
+    }
+    
+    func probeNumSelected() -> Int {
+        return probeSelected
+        
     }
     
     
