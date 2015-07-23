@@ -28,6 +28,13 @@
 		918BD4921B5FD2FA0044BC7F /* Angle Down-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 918BD4901B5FD2FA0044BC7F /* Angle Down-50.png */; };
 		918BD4931B5FD2FA0044BC7F /* Angle Up-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 918BD4911B5FD2FA0044BC7F /* Angle Up-50.png */; };
 		918BD4951B605FA20044BC7F /* Loud-Alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 918BD4941B605FA20044BC7F /* Loud-Alarm.mp3 */; };
+		918BD4A01B6083020044BC7F /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918BD49F1B6083020044BC7F /* InterfaceController.swift */; };
+		918BD4A41B6083020044BC7F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918BD4A31B6083020044BC7F /* Images.xcassets */; };
+		918BD4A81B6083020044BC7F /* Lazy Griller WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 918BD4A71B6083020044BC7F /* Lazy Griller WatchKit App.app */; };
+		918BD4B01B6083020044BC7F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918BD4AE1B6083020044BC7F /* Interface.storyboard */; };
+		918BD4B21B6083020044BC7F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918BD4B11B6083020044BC7F /* Images.xcassets */; };
+		918BD4B51B6083020044BC7F /* Lazy Griller WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 918BD49A1B6083020044BC7F /* Lazy Griller WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		918BD4BE1B6088630044BC7F /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 918BD4BD1B6088630044BC7F /* WatchKit.framework */; };
 		91A7978B1B4F4241001D5448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A7978A1B4F4241001D5448 /* AppDelegate.swift */; };
 		91A797901B4F4241001D5448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91A7978E1B4F4241001D5448 /* Main.storyboard */; };
 		91A797921B4F4241001D5448 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91A797911B4F4241001D5448 /* Images.xcassets */; };
@@ -45,6 +52,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		918BD4A91B6083020044BC7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91A7977D1B4F4241001D5448 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 918BD4A61B6083020044BC7F;
+			remoteInfo = "Lazy Griller WatchKit App";
+		};
+		918BD4B31B6083020044BC7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91A7977D1B4F4241001D5448 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 918BD4991B6083020044BC7F;
+			remoteInfo = "Lazy Griller WatchKit Extension";
+		};
 		91A7979B1B4F4241001D5448 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 91A7977D1B4F4241001D5448 /* Project object */;
@@ -53,6 +74,20 @@
 			remoteInfo = "Lazy Griller";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		918BD4BC1B6083020044BC7F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				918BD4B51B6083020044BC7F /* Lazy Griller WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9101D1CF1B5DB0D100454A93 /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +111,18 @@
 		918BD4901B5FD2FA0044BC7F /* Angle Down-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Angle Down-50.png"; sourceTree = "<group>"; };
 		918BD4911B5FD2FA0044BC7F /* Angle Up-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Angle Up-50.png"; sourceTree = "<group>"; };
 		918BD4941B605FA20044BC7F /* Loud-Alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Loud-Alarm.mp3"; sourceTree = "<group>"; };
+		918BD49A1B6083020044BC7F /* Lazy Griller WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Lazy Griller WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		918BD49D1B6083020044BC7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		918BD49E1B6083020044BC7F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		918BD49F1B6083020044BC7F /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		918BD4A31B6083020044BC7F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		918BD4A71B6083020044BC7F /* Lazy Griller WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lazy Griller WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		918BD4AD1B6083020044BC7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		918BD4AF1B6083020044BC7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		918BD4B11B6083020044BC7F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		918BD4BD1B6088630044BC7F /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		91974B441B60959B00FCD4B6 /* Lazy Griller WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Lazy Griller WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		91974B451B6095AD00FCD4B6 /* Lazy Griller.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Lazy Griller.entitlements"; sourceTree = "<group>"; };
 		91A797851B4F4241001D5448 /* Lazy Griller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lazy Griller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A797891B4F4241001D5448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91A7978A1B4F4241001D5448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +144,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		918BD4971B6083020044BC7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				918BD4BE1B6088630044BC7F /* WatchKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		91A797821B4F4241001D5448 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -114,11 +169,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		918BD49B1B6083020044BC7F /* Lazy Griller WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				91974B441B60959B00FCD4B6 /* Lazy Griller WatchKit Extension.entitlements */,
+				918BD49F1B6083020044BC7F /* InterfaceController.swift */,
+				918BD4A31B6083020044BC7F /* Images.xcassets */,
+				918BD49C1B6083020044BC7F /* Supporting Files */,
+			);
+			path = "Lazy Griller WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		918BD49C1B6083020044BC7F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				918BD49D1B6083020044BC7F /* Info.plist */,
+				918BD49E1B6083020044BC7F /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		918BD4AB1B6083020044BC7F /* Lazy Griller WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				918BD4AE1B6083020044BC7F /* Interface.storyboard */,
+				918BD4B11B6083020044BC7F /* Images.xcassets */,
+				918BD4AC1B6083020044BC7F /* Supporting Files */,
+			);
+			path = "Lazy Griller WatchKit App";
+			sourceTree = "<group>";
+		};
+		918BD4AC1B6083020044BC7F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				918BD4AD1B6083020044BC7F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		91A7977C1B4F4241001D5448 = {
 			isa = PBXGroup;
 			children = (
+				918BD4BD1B6088630044BC7F /* WatchKit.framework */,
 				91A797871B4F4241001D5448 /* Lazy Griller */,
 				91A7979D1B4F4241001D5448 /* Lazy GrillerTests */,
+				918BD49B1B6083020044BC7F /* Lazy Griller WatchKit Extension */,
+				918BD4AB1B6083020044BC7F /* Lazy Griller WatchKit App */,
 				91A797861B4F4241001D5448 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -128,6 +224,8 @@
 			children = (
 				91A797851B4F4241001D5448 /* Lazy Griller.app */,
 				91A7979A1B4F4241001D5448 /* Lazy GrillerTests.xctest */,
+				918BD49A1B6083020044BC7F /* Lazy Griller WatchKit Extension.appex */,
+				918BD4A71B6083020044BC7F /* Lazy Griller WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +233,7 @@
 		91A797871B4F4241001D5448 /* Lazy Griller */ = {
 			isa = PBXGroup;
 			children = (
+				91974B451B6095AD00FCD4B6 /* Lazy Griller.entitlements */,
 				91A7978A1B4F4241001D5448 /* AppDelegate.swift */,
 				91A7978E1B4F4241001D5448 /* Main.storyboard */,
 				9101D1CF1B5DB0D100454A93 /* AlarmViewController.swift */,
@@ -202,6 +301,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		918BD4991B6083020044BC7F /* Lazy Griller WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 918BD4B91B6083020044BC7F /* Build configuration list for PBXNativeTarget "Lazy Griller WatchKit Extension" */;
+			buildPhases = (
+				918BD4961B6083020044BC7F /* Sources */,
+				918BD4971B6083020044BC7F /* Frameworks */,
+				918BD4981B6083020044BC7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				918BD4AA1B6083020044BC7F /* PBXTargetDependency */,
+			);
+			name = "Lazy Griller WatchKit Extension";
+			productName = "Lazy Griller WatchKit Extension";
+			productReference = 918BD49A1B6083020044BC7F /* Lazy Griller WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		918BD4A61B6083020044BC7F /* Lazy Griller WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 918BD4B61B6083020044BC7F /* Build configuration list for PBXNativeTarget "Lazy Griller WatchKit App" */;
+			buildPhases = (
+				918BD4A51B6083020044BC7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lazy Griller WatchKit App";
+			productName = "Lazy Griller WatchKit App";
+			productReference = 918BD4A71B6083020044BC7F /* Lazy Griller WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		91A797841B4F4241001D5448 /* Lazy Griller */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91A797A41B4F4241001D5448 /* Build configuration list for PBXNativeTarget "Lazy Griller" */;
@@ -209,10 +341,12 @@
 				91A797811B4F4241001D5448 /* Sources */,
 				91A797821B4F4241001D5448 /* Frameworks */,
 				91A797831B4F4241001D5448 /* Resources */,
+				918BD4BC1B6083020044BC7F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				918BD4B41B6083020044BC7F /* PBXTargetDependency */,
 			);
 			name = "Lazy Griller";
 			productName = "Lazy Griller";
@@ -246,9 +380,26 @@
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = MontagueTech;
 				TargetAttributes = {
+					918BD4991B6083020044BC7F = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 4Y9BVM7DRL;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					918BD4A61B6083020044BC7F = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 4Y9BVM7DRL;
+					};
 					91A797841B4F4241001D5448 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 4Y9BVM7DRL;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 0;
 							};
@@ -275,11 +426,31 @@
 			targets = (
 				91A797841B4F4241001D5448 /* Lazy Griller */,
 				91A797991B4F4241001D5448 /* Lazy GrillerTests */,
+				918BD4991B6083020044BC7F /* Lazy Griller WatchKit Extension */,
+				918BD4A61B6083020044BC7F /* Lazy Griller WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		918BD4981B6083020044BC7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				918BD4A41B6083020044BC7F /* Images.xcassets in Resources */,
+				918BD4A81B6083020044BC7F /* Lazy Griller WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		918BD4A51B6083020044BC7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				918BD4B01B6083020044BC7F /* Interface.storyboard in Resources */,
+				918BD4B21B6083020044BC7F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		91A797831B4F4241001D5448 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -320,6 +491,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		918BD4961B6083020044BC7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				918BD4A01B6083020044BC7F /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		91A797811B4F4241001D5448 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,6 +528,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		918BD4AA1B6083020044BC7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 918BD4A61B6083020044BC7F /* Lazy Griller WatchKit App */;
+			targetProxy = 918BD4A91B6083020044BC7F /* PBXContainerItemProxy */;
+		};
+		918BD4B41B6083020044BC7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 918BD4991B6083020044BC7F /* Lazy Griller WatchKit Extension */;
+			targetProxy = 918BD4B31B6083020044BC7F /* PBXContainerItemProxy */;
+		};
 		91A7979C1B4F4241001D5448 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 91A797841B4F4241001D5448 /* Lazy Griller */;
@@ -357,6 +546,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		918BD4AE1B6083020044BC7F /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				918BD4AF1B6083020044BC7F /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		91A7978E1B4F4241001D5448 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -376,6 +573,76 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		918BD4B71B6083020044BC7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Lazy_Griller_WatchKit_Extension;
+				INFOPLIST_FILE = "Lazy Griller WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		918BD4B81B6083020044BC7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				IBSC_MODULE = Lazy_Griller_WatchKit_Extension;
+				INFOPLIST_FILE = "Lazy Griller WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		918BD4BA1B6083020044BC7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Lazy Griller WatchKit Extension/Lazy Griller WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Lazy Griller WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		918BD4BB1B6083020044BC7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Lazy Griller WatchKit Extension/Lazy Griller WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Lazy Griller WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		91A797A21B4F4241001D5448 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -463,9 +730,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Lazy Griller/Lazy Griller.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Lazy Griller/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -474,9 +745,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Lazy Griller/Lazy Griller.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Lazy Griller/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -518,6 +793,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		918BD4B61B6083020044BC7F /* Build configuration list for PBXNativeTarget "Lazy Griller WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				918BD4B71B6083020044BC7F /* Debug */,
+				918BD4B81B6083020044BC7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		918BD4B91B6083020044BC7F /* Build configuration list for PBXNativeTarget "Lazy Griller WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				918BD4BA1B6083020044BC7F /* Debug */,
+				918BD4BB1B6083020044BC7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		91A797801B4F4241001D5448 /* Build configuration list for PBXProject "Lazy Griller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

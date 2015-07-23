@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Lazy_Griller_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="136" height="20" alignment="center" text="Probe 1 Temp" textAlignment="center" id="Kci-xB-6E4">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <button width="100" height="100" alignment="center" verticalAlignment="center" title="?" backgroundImage="TempButtonWatch.png" id="Umb-r9-UtK">
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="thin" pointSize="32"/>
+                            <connections>
+                                <action selector="probe1Pressed" destination="AgC-eL-Hgc" id="b7u-uc-W4E"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="probe1Label" destination="Umb-r9-UtK" id="cBI-s1-I5W"/>
+                        <segue destination="SGx-ov-szx" kind="relationship" relationship="nextPage" id="YsX-JF-X48"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Rxs-hr-rcB">
+            <objects>
+                <controller id="SGx-ov-szx" customClass="InterfaceController" customModule="Lazy_Griller_WatchKit_Extension">
+                    <items>
+                        <label width="136" height="20" alignment="center" text="Probe 2 Temp" textAlignment="center" id="waR-vl-k1c">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <button width="100" height="100" alignment="center" verticalAlignment="center" title="?" backgroundImage="TempButtonWatch.png" id="SXA-Q5-njA">
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="thin" pointSize="32"/>
+                            <connections>
+                                <action selector="probe2Pressed" destination="SGx-ov-szx" id="9kh-Un-g5e"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="probe2Label" destination="SXA-Q5-njA" id="G22-nX-rDe"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="392" y="346"/>
+        </scene>
+    </scenes>
+</document>

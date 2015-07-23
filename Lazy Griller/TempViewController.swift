@@ -420,6 +420,48 @@ class TempViewController: UIViewController {
                 }
             }
         }
+        
+        if Alarms.sharedInstance.alarm2IsOn() {
+            if let recReading = RecentReading.sharedInstance.getLastTemp(2) {
+                if recReading >= Double(Alarms.sharedInstance.getAlarm2Temp()) {
+                    if !alertOpen {
+                        //PLAY THAT FUNKY MUSIC
+                        println("Notification scheduled")
+                        
+                        
+                        let filePath = NSBundle.mainBundle().pathForResource("Loud-Alarm", ofType: "mp3")
+                        let fileURL = NSURL(fileURLWithPath: filePath!)
+                        
+                        AudioServicesCreateSystemSoundID(fileURL, &soundID)
+                        AudioServicesPlaySystemSound(soundID)
+                        
+                        let alertController = UIAlertController(title: "Probe 2 Alarm", message:
+                            "Temperature is over " + "\(Alarms.sharedInstance.getAlarm2Temp()) °F", preferredStyle: UIAlertControllerStyle.Alert)
+                        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: handler))
+                        
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                        alertOpen = true
+                        
+                    }
+                }
+            }
+        }
+        
+        
+        updateGroupData()
+
+    }
+    
+    func updateGroupData() {
+        var defaults = NSUserDefaults(suiteName: "group.LazyDefaults")
+        defaults!.setBool(Alarms.sharedInstance.alarm1IsOn(), forKey: "probe1Alarm")
+        defaults!.setBool(Alarms.sharedInstance.alarm2IsOn(), forKey: "probe2Alarm")
+        defaults!.setInteger(Alarms.sharedInstance.getAlarm1Temp(), forKey: "probe1AlarmTemp")
+        defaults!.setInteger(Alarms.sharedInstance.getAlarm2Temp(), forKey: "probe2AlarmTemp")
+        
+        defaults!.setDouble(RecentReading.sharedInstance.getLastTemp(1)!, forKey: "probe1LastTemp")
+        defaults!.setDouble(RecentReading.sharedInstance.getLastTemp(2)!, forKey: "probe2LastTemp")
+        defaults?.synchronize()
     }
     
     func handler(act:UIAlertAction!) {
