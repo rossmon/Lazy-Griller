@@ -8,6 +8,7 @@
 
 
 import UIKit
+import AVFoundation
 
 @objc
 protocol TempViewControllerDelegate {
@@ -125,6 +126,11 @@ class TempViewController: UIViewController {
     var p2Time: NSDate?
     
     var probeSelected: Int = 1
+    var defaultAlarmTemp = 200
+    
+    var audioPlayer = AVAudioPlayer()
+    var soundID:SystemSoundID = 0
+    var alertOpen = false
     
     var alarmViewController: AlarmViewController!
     
@@ -378,22 +384,48 @@ class TempViewController: UIViewController {
         
         RecentReading.sharedInstance.setRecentReadings(probe1GraphReadings, p2Readings: probe2GraphReadings)
         
-        //Alarms.sharedInstance.turnOnProbe1Alarm()
+
+        if let lastTemp = RecentReading.sharedInstance.getLastTemp(probeNumSelected()) {
+            if alarmViewController != nil {
+                //alarmViewController.currentTemp.text = "\(lastTemp)"
+                var probereading = Int(round(lastTemp))
+                var probeString = String(probereading)
+                alarmViewController.currentTemp.text = probeString + " °F"
+            }
+        }
+
         
         if Alarms.sharedInstance.alarm1IsOn() {
             if let recReading = RecentReading.sharedInstance.getLastTemp(1) {
                 if recReading >= Double(Alarms.sharedInstance.getAlarm1Temp()) {
-                    //PLAY THAT FUNKY MUSIC
-                    println("Notification scheduled")
-                    
-                    let alertController = UIAlertController(title: "Probe 1 Alarm", message:
-                        "Temperature is over " + "\(Alarms.sharedInstance.getAlarm1Temp()) °F", preferredStyle: UIAlertControllerStyle.Alert)
-                    alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-                    
-                    self.presentViewController(alertController, animated: true, completion: nil)
+                    if !alertOpen {
+                        //PLAY THAT FUNKY MUSIC
+                        println("Notification scheduled")
+                        
+                        
+                        let filePath = NSBundle.mainBundle().pathForResource("Loud-Alarm", ofType: "mp3")
+                        let fileURL = NSURL(fileURLWithPath: filePath!)
+                        
+                        AudioServicesCreateSystemSoundID(fileURL, &soundID)
+                        AudioServicesPlaySystemSound(soundID)
+                        
+                        let alertController = UIAlertController(title: "Probe 1 Alarm", message:
+                            "Temperature is over " + "\(Alarms.sharedInstance.getAlarm1Temp()) °F", preferredStyle: UIAlertControllerStyle.Alert)
+                        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: handler))
+                        
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                        alertOpen = true
+
+                    }
                 }
             }
         }
+    }
+    
+    func handler(act:UIAlertAction!) {
+        AudioServicesDisposeSystemSoundID(soundID)
+        println("User tapped \(act.title)")
+        alertOpen = false
     }
     
     

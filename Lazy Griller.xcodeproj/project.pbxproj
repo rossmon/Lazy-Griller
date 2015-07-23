@@ -27,6 +27,7 @@
 		918BD48F1B5FCF130044BC7F /* AlarmOffButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 918BD48D1B5FCF130044BC7F /* AlarmOffButton.png */; };
 		918BD4921B5FD2FA0044BC7F /* Angle Down-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 918BD4901B5FD2FA0044BC7F /* Angle Down-50.png */; };
 		918BD4931B5FD2FA0044BC7F /* Angle Up-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 918BD4911B5FD2FA0044BC7F /* Angle Up-50.png */; };
+		918BD4951B605FA20044BC7F /* Loud-Alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 918BD4941B605FA20044BC7F /* Loud-Alarm.mp3 */; };
 		91A7978B1B4F4241001D5448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A7978A1B4F4241001D5448 /* AppDelegate.swift */; };
 		91A797901B4F4241001D5448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91A7978E1B4F4241001D5448 /* Main.storyboard */; };
 		91A797921B4F4241001D5448 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91A797911B4F4241001D5448 /* Images.xcassets */; };
@@ -74,6 +75,7 @@
 		918BD48D1B5FCF130044BC7F /* AlarmOffButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AlarmOffButton.png; sourceTree = "<group>"; };
 		918BD4901B5FD2FA0044BC7F /* Angle Down-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Angle Down-50.png"; sourceTree = "<group>"; };
 		918BD4911B5FD2FA0044BC7F /* Angle Up-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Angle Up-50.png"; sourceTree = "<group>"; };
+		918BD4941B605FA20044BC7F /* Loud-Alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Loud-Alarm.mp3"; sourceTree = "<group>"; };
 		91A797851B4F4241001D5448 /* Lazy Griller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lazy Griller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A797891B4F4241001D5448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91A7978A1B4F4241001D5448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				91A797B21B4F4E82001D5448 /* Line Chart-30.png */,
 				912994361B5C4AFD00C646F2 /* TempButton2Graph.png */,
 				912994371B5C4AFD00C646F2 /* TempButton2Temp.png */,
+				918BD4941B605FA20044BC7F /* Loud-Alarm.mp3 */,
 				918BD4901B5FD2FA0044BC7F /* Angle Down-50.png */,
 				918BD4911B5FD2FA0044BC7F /* Angle Up-50.png */,
 				918BD48C1B5FCF130044BC7F /* AlarmTempDisp.png */,
@@ -245,6 +248,11 @@
 				TargetAttributes = {
 					91A797841B4F4241001D5448 = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					91A797991B4F4241001D5448 = {
 						CreatedOnToolsVersion = 6.4;
@@ -277,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				912994331B5C420E00C646F2 /* TempButton2.png in Resources */,
+				918BD4951B605FA20044BC7F /* Loud-Alarm.mp3 in Resources */,
 				91A797901B4F4241001D5448 /* Main.storyboard in Resources */,
 				9180A87B1B532A8600C1CFB9 /* flame.png in Resources */,
 				918BD4921B5FD2FA0044BC7F /* Angle Down-50.png in Resources */,

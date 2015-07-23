@@ -96,7 +96,7 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
             if (currentState == .TopPanelCollapsed) {
                 if (gestureIsDraggingFromToptoBottom) {
                     if currentView == .Temperatures {
-                        addTopPanelViewControllerGraph()
+                        addTopPanelViewControllerTemps()
                         showShadowForTempViewController(true)
                     }
                     else if currentView == .Graphs {
@@ -124,49 +124,96 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
             }
             
         case .Changed:
-            if currentView == .Temperatures {
-                if recognizer.translationInView(view).y < 150 {
-                    tempViewController.view.center.y = tempViewController.view.center.y + recognizer.translationInView(view).y
-                    recognizer.setTranslation(CGPointZero, inView: view)
+            if gestureIsDraggingFromToptoBottom {
+                if currentView == .Temperatures {
+                    if recognizer.translationInView(view).y < 150 {
+                        tempViewController.view.center.y = tempViewController.view.center.y + recognizer.translationInView(view).y
+                        recognizer.setTranslation(CGPointZero, inView: view)
+                    }
+                    else {
+                        tempViewController.view.center.y = tempViewController.view.center.y + 150
+                        recognizer.setTranslation(CGPointZero, inView: view)
+                    }
                 }
-                else {
-                    tempViewController.view.center.y = tempViewController.view.center.y + 150
-                    recognizer.setTranslation(CGPointZero, inView: view)
+                else if currentView == .Graphs {
+                    if recognizer.translationInView(view).y < 150 {
+                        graphViewController.view.center.y = tempViewController.view.center.y + recognizer.translationInView(view).y
+                        recognizer.setTranslation(CGPointZero, inView: view)
+                    }
+                    else {
+                        graphViewController.view.center.y = tempViewController.view.center.y + 150
+                        recognizer.setTranslation(CGPointZero, inView: view)
+                    }
+                }
+                else if currentView == .Settings {
+                    if recognizer.translationInView(view).y < 150 {
+                        settingViewController.view.center.y = tempViewController.view.center.y + recognizer.translationInView(view).y
+                        recognizer.setTranslation(CGPointZero, inView: view)
+                    }
+                    else {
+                        settingViewController.view.center.y = tempViewController.view.center.y + 150
+                        recognizer.setTranslation(CGPointZero, inView: view)
+                    }
                 }
             }
-            else if currentView == .Graphs {
-                if recognizer.translationInView(view).y < 150 {
-                    graphViewController.view.center.y = tempViewController.view.center.y + recognizer.translationInView(view).y
-                    recognizer.setTranslation(CGPointZero, inView: view)
+            else if gestureIsDraggingFromBottomtoTop {
+                if currentView == .Temperatures {
+                    if recognizer.translationInView(view).y < 150 {
+                        tempViewController.view.center.y = tempViewController.view.center.y - recognizer.translationInView(view).y
+                        recognizer.setTranslation(CGPointZero, inView: view)
+                    }
+                    else {
+                        tempViewController.view.center.y = tempViewController.view.center.y - 150
+                        recognizer.setTranslation(CGPointZero, inView: view)
+                    }
                 }
-                else {
-                    graphViewController.view.center.y = tempViewController.view.center.y + 150
-                    recognizer.setTranslation(CGPointZero, inView: view)
+                else if currentView == .Graphs {
+                    if recognizer.translationInView(view).y < 150 {
+                        graphViewController.view.center.y = tempViewController.view.center.y - recognizer.translationInView(view).y
+                        recognizer.setTranslation(CGPointZero, inView: view)
+                    }
+                    else {
+                        graphViewController.view.center.y = tempViewController.view.center.y - 150
+                        recognizer.setTranslation(CGPointZero, inView: view)
+                    }
                 }
-            }
-            else if currentView == .Settings {
-                if recognizer.translationInView(view).y < 150 {
-                    settingViewController.view.center.y = tempViewController.view.center.y + recognizer.translationInView(view).y
-                    recognizer.setTranslation(CGPointZero, inView: view)
-                }
-                else {
-                    settingViewController.view.center.y = tempViewController.view.center.y + 150
-                    recognizer.setTranslation(CGPointZero, inView: view)
+                else if currentView == .Settings {
+                    if recognizer.translationInView(view).y < 150 {
+                        settingViewController.view.center.y = tempViewController.view.center.y - recognizer.translationInView(view).y
+                        recognizer.setTranslation(CGPointZero, inView: view)
+                    }
+                    else {
+                        settingViewController.view.center.y = tempViewController.view.center.y - 150
+                        recognizer.setTranslation(CGPointZero, inView: view)
+                    }
                 }
             }
 
+            
         case .Ended:
-            if (tempViewController != nil) {
-                // animate the side panel open or closed based on whether the view has moved more or less than halfway
-                let hasMovedGreaterThanHalfway = recognizer.view!.center.y > 0 //view.bounds.size.height
-                animateTopPanelTemps(shouldExpand: hasMovedGreaterThanHalfway)
-            } else if (graphViewController != nil) {
-                let hasMovedGreaterThanHalfway = recognizer.view!.center.y < 0
-                animateTopPanelGraph(shouldExpand: hasMovedGreaterThanHalfway)
-            } else if (settingViewController != nil) {
-                let hasMovedGreaterThanHalfway = recognizer.view!.center.y < 0
-                animateTopPanelSetting(shouldExpand: hasMovedGreaterThanHalfway)
+            if gestureIsDraggingFromToptoBottom {
+                if (tempViewController != nil) {
+                    // animate the side panel open or closed based on whether the view has moved more or less than halfway
+                    let hasMovedGreaterThanHalfway = recognizer.view!.center.y > 0 //view.bounds.size.height
+                    animateTopPanelTemps(shouldExpand: hasMovedGreaterThanHalfway)
+                } else if (graphViewController != nil) {
+                    let hasMovedGreaterThanHalfway = recognizer.view!.center.y < 0
+                    animateTopPanelGraph(shouldExpand: hasMovedGreaterThanHalfway)
+                } else if (settingViewController != nil) {
+                    let hasMovedGreaterThanHalfway = recognizer.view!.center.y < 0
+                    animateTopPanelSetting(shouldExpand: hasMovedGreaterThanHalfway)
+                }
             }
+            else if gestureIsDraggingFromBottomtoTop {
+                if (tempViewController != nil) && (topPanelViewController != nil){
+                    animateTopPanelTemps(shouldExpand: false)
+                } else if (graphViewController != nil) && (topPanelViewController != nil) {
+                    animateTopPanelGraph(shouldExpand: false)
+                } else if (settingViewController != nil) && (topPanelViewController != nil) {
+                    animateTopPanelSetting(shouldExpand: false)
+                }
+            }
+            
         default:
             break
         }
@@ -211,8 +258,11 @@ extension ContainerViewController: TempViewControllerDelegate {
             animatetempPanelYPositionTemps(targetPosition: 0) { _ in
                 self.currentState = .TopPanelCollapsed
                 
-                self.topPanelViewController!.view.removeFromSuperview()
-                self.topPanelViewController = nil
+                if self.topPanelViewController != nil {
+                    self.topPanelViewController!.view.removeFromSuperview()
+                    self.topPanelViewController = nil
+                }
+                
             }
         }
     }
@@ -345,8 +395,10 @@ extension ContainerViewController: GraphViewControllerDelegate {
             animatetempPanelYPositionGraph(targetPosition: 0) { _ in
                 self.currentState = .TopPanelCollapsed
                 
-                self.topPanelViewController!.view.removeFromSuperview()
-                self.topPanelViewController = nil
+                if self.topPanelViewController != nil {
+                    self.topPanelViewController!.view.removeFromSuperview()
+                    self.topPanelViewController = nil
+                }
             }
         }
     }
@@ -480,8 +532,10 @@ extension ContainerViewController: SettingViewControllerDelegate {
             animatetempPanelYPositionSetting(targetPosition: 0) { _ in
                 self.currentState = .TopPanelCollapsed
                 
-                self.topPanelViewController!.view.removeFromSuperview()
-                self.topPanelViewController = nil
+                if self.topPanelViewController != nil {
+                    self.topPanelViewController!.view.removeFromSuperview()
+                    self.topPanelViewController = nil
+                }
             }
         }
     }

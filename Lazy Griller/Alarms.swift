@@ -10,8 +10,8 @@ import Foundation
 
 class Alarms {
     
-    private var probe1Alarm: Int
-    private var probe2Alarm: Int
+    private var probe1Alarm: Int = 135
+    private var probe2Alarm: Int = 200
     private var probe1AlarmOn: Bool = false
     private var probe2AlarmOn: Bool = false
     
@@ -28,8 +28,7 @@ class Alarms {
         self.probe2Alarm = probe2AlarmTemp
     }
     init() {
-        probe1Alarm = 200
-        probe2Alarm = 200
+        
     }
     
     func getAlarm1Temp()->Int {
@@ -80,6 +79,12 @@ class Alarms {
     }
     func turnOnProbe2Alarm() {
         probe2AlarmOn = true
+    }
+    func turnOffProbe1Alarm() {
+        probe1AlarmOn = false
+    }
+    func turnOffProbe2Alarm() {
+        probe2AlarmOn = false
     }
     
 }

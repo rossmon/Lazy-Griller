@@ -106,29 +106,59 @@ class AlarmViewController: UIViewController {
         
     }
     @IBAction func counterViewTap(gesture:UITapGestureRecognizer?) {
-        if (isAlarmViewShowing) {
-            alarmTemp.text = "\(Alarms.sharedInstance.getAlarm1Temp())"
-            //hide alarmView
-            UIView.transitionFromView(alarmView,
-                toView: noAlarmView,
-                duration: 0.2,
-                options: UIViewAnimationOptions.TransitionFlipFromLeft
-                    | UIViewAnimationOptions.ShowHideTransitionViews,
-                completion:nil)
+        if delegate?.probeNumSelected() == 1 {
+            if (isAlarmViewShowing) {
+                alarmTemp.text = "\(Alarms.sharedInstance.getAlarm1Temp())"
+                //hide alarmView
+                UIView.transitionFromView(alarmView,
+                    toView: noAlarmView,
+                    duration: 0.2,
+                    options: UIViewAnimationOptions.TransitionFlipFromLeft
+                        | UIViewAnimationOptions.ShowHideTransitionViews,
+                    completion:nil)
+                
+                Alarms.sharedInstance.turnOffProbe1Alarm()
+            } else {
+                alarmTemp.text = "\(Alarms.sharedInstance.getAlarm1Temp())"
+                //show alarmView
+                UIView.transitionFromView(noAlarmView,
+                    toView: alarmView,
+                    duration: 0.2,
+                    options: UIViewAnimationOptions.TransitionFlipFromRight
+                        | UIViewAnimationOptions.ShowHideTransitionViews,
+                    completion: nil)
+                Alarms.sharedInstance.turnOnProbe1Alarm()
+            }
+            isAlarmViewShowing = !isAlarmViewShowing
             
-            Alarms.sharedInstance.toggleProbe1Alarm()
-        } else {
-            alarmTemp.text = "\(Alarms.sharedInstance.getAlarm2Temp())"
-            //show alarmView
-            UIView.transitionFromView(noAlarmView,
-                toView: alarmView,
-                duration: 0.2,
-                options: UIViewAnimationOptions.TransitionFlipFromRight
-                    | UIViewAnimationOptions.ShowHideTransitionViews,
-                completion: nil)
         }
-        isAlarmViewShowing = !isAlarmViewShowing
-        Alarms.sharedInstance.toggleProbe2Alarm()
+        else {
+            if (isAlarmViewShowing) {
+                alarmTemp.text = "\(Alarms.sharedInstance.getAlarm2Temp())"
+                //hide alarmView
+                UIView.transitionFromView(alarmView,
+                    toView: noAlarmView,
+                    duration: 0.2,
+                    options: UIViewAnimationOptions.TransitionFlipFromLeft
+                        | UIViewAnimationOptions.ShowHideTransitionViews,
+                    completion:nil)
+                
+                Alarms.sharedInstance.turnOffProbe2Alarm()
+            } else {
+                alarmTemp.text = "\(Alarms.sharedInstance.getAlarm2Temp())"
+                //show alarmView
+                UIView.transitionFromView(noAlarmView,
+                    toView: alarmView,
+                    duration: 0.2,
+                    options: UIViewAnimationOptions.TransitionFlipFromRight
+                        | UIViewAnimationOptions.ShowHideTransitionViews,
+                    completion: nil)
+                Alarms.sharedInstance.turnOnProbe2Alarm()
+            }
+            isAlarmViewShowing = !isAlarmViewShowing
+            
+        }
+        
     }
 }
 

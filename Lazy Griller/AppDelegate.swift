@@ -29,18 +29,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setBool(Alarms.sharedInstance.alarm1IsOn(), forKey: "probe1Alarm")
+        defaults.setBool(Alarms.sharedInstance.alarm2IsOn(), forKey: "probe2Alarm")
+        defaults.setInteger(Alarms.sharedInstance.getAlarm1Temp(), forKey: "probe1AlarmTemp")
+        defaults.setInteger(Alarms.sharedInstance.getAlarm2Temp(), forKey: "probe2AlarmTemp")
+
     }
     
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        let defaults = NSUserDefaults.standardUserDefaults()
+        Alarms.sharedInstance.setProbe1Alarm(defaults.integerForKey("probe1AlarmTemp"))
+        Alarms.sharedInstance.setProbe2Alarm(defaults.integerForKey("probe2AlarmTemp"))
+        if defaults.boolForKey("probe1Alarm") {Alarms.sharedInstance.turnOnProbe1Alarm()}
+        if defaults.boolForKey("probe2Alarm") {Alarms.sharedInstance.turnOnProbe2Alarm()}
     }
     
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+//        let defaults = NSUserDefaults.standardUserDefaults()
+//        Alarms.sharedInstance.setProbe1Alarm(defaults.integerForKey("probe1AlarmTemp"))
+//        Alarms.sharedInstance.setProbe2Alarm(defaults.integerForKey("probe2AlarmTemp"))
+//        if defaults.boolForKey("probe1Alarm") {Alarms.sharedInstance.turnOnProbe1Alarm()}
+//        if defaults.boolForKey("probe2Alarm") {Alarms.sharedInstance.turnOnProbe2Alarm()}
     }
     
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setBool(Alarms.sharedInstance.alarm1IsOn(), forKey: "probe1Alarm")
+        defaults.setBool(Alarms.sharedInstance.alarm2IsOn(), forKey: "probe2Alarm")
+        defaults.setInteger(Alarms.sharedInstance.getAlarm1Temp(), forKey: "probe1AlarmTemp")
+        defaults.setInteger(Alarms.sharedInstance.getAlarm2Temp(), forKey: "probe2AlarmTemp")
     }
     
 }
