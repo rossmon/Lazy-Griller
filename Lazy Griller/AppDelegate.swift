@@ -35,6 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         defaults.setBool(Alarms.sharedInstance.alarm2IsOn(), forKey: "probe2Alarm")
         defaults.setInteger(Alarms.sharedInstance.getAlarm1Temp(), forKey: "probe1AlarmTemp")
         defaults.setInteger(Alarms.sharedInstance.getAlarm2Temp(), forKey: "probe2AlarmTemp")
+        
+        defaults.setDouble(RecentReading.sharedInstance.getLastTemp(1)!, forKey: "probe1LastTemp")
+        defaults.setDouble(RecentReading.sharedInstance.getLastTemp(2)!, forKey: "probe2LastTemp")
 
     }
     
@@ -45,6 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Alarms.sharedInstance.setProbe2Alarm(defaults.integerForKey("probe2AlarmTemp"))
         if defaults.boolForKey("probe1Alarm") {Alarms.sharedInstance.turnOnProbe1Alarm()}
         if defaults.boolForKey("probe2Alarm") {Alarms.sharedInstance.turnOnProbe2Alarm()}
+        RecentReading.sharedInstance.setLastTemp(1, temp: defaults.doubleForKey("probe1LastTemp"))
+        RecentReading.sharedInstance.setLastTemp(2, temp: defaults.doubleForKey("probe2LastTemp"))
     }
     
     func applicationDidBecomeActive(application: UIApplication) {
@@ -63,6 +68,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         defaults.setBool(Alarms.sharedInstance.alarm2IsOn(), forKey: "probe2Alarm")
         defaults.setInteger(Alarms.sharedInstance.getAlarm1Temp(), forKey: "probe1AlarmTemp")
         defaults.setInteger(Alarms.sharedInstance.getAlarm2Temp(), forKey: "probe2AlarmTemp")
+        
+        defaults.setDouble(RecentReading.sharedInstance.getLastTemp(1)!, forKey: "probe1LastTemp")
+        defaults.setDouble(RecentReading.sharedInstance.getLastTemp(2)!, forKey: "probe2LastTemp")
+        RecentReading.sharedInstance.setLastTemp(1, temp: defaults.doubleForKey("probe1LastTemp"))
+        RecentReading.sharedInstance.setLastTemp(2, temp: defaults.doubleForKey("probe2LastTemp"))
     }
     
 }

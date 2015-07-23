@@ -93,24 +93,24 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
         
         switch(recognizer.state) {
         case .Began:
-            if (currentState == .TopPanelCollapsed) {
-                if (gestureIsDraggingFromToptoBottom) {
-                    if currentView == .Temperatures {
-                        addTopPanelViewControllerTemps()
-                        showShadowForTempViewController(true)
+            if gestureIsDraggingFromToptoBottom {
+                if (currentState == .TopPanelCollapsed) {
+                        if currentView == .Temperatures {
+                            addTopPanelViewControllerTemps()
+                            showShadowForTempViewController(true)
+                        }
+                        else if currentView == .Graphs {
+                            addTopPanelViewControllerGraph()
+                            showShadowForGraphViewController(true)
+                        }
+                        else if currentView == .Settings {
+                            addTopPanelViewControllerSetting()
+                            showShadowForSettingViewController(true)
+                        }
                     }
-                    else if currentView == .Graphs {
-                        addTopPanelViewControllerGraph()
-                        showShadowForGraphViewController(true)
-                    }
-                    else if currentView == .Settings {
-                        addTopPanelViewControllerSetting()
-                        showShadowForSettingViewController(true)
-                    }
-                }
             }
-            else if (currentState == .TopPanelExpanded) {
-                if (gestureIsDraggingFromBottomtoTop) {
+            else if gestureIsDraggingFromBottomtoTop {
+                if (currentState == .TopPanelExpanded) {
                     if currentView == .Temperatures {
                         animateTopPanelTemps(shouldExpand: false)
                     }
@@ -121,7 +121,39 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
                         animateTopPanelSetting(shouldExpand: false)
                     }
                 }
+                else {
+                    break
+                }
             }
+//            if (currentState == .TopPanelCollapsed) {
+//                if (gestureIsDraggingFromToptoBottom) {
+//                    if currentView == .Temperatures {
+//                        addTopPanelViewControllerTemps()
+//                        showShadowForTempViewController(true)
+//                    }
+//                    else if currentView == .Graphs {
+//                        addTopPanelViewControllerGraph()
+//                        showShadowForGraphViewController(true)
+//                    }
+//                    else if currentView == .Settings {
+//                        addTopPanelViewControllerSetting()
+//                        showShadowForSettingViewController(true)
+//                    }
+//                }
+//            }
+//            else if (currentState == .TopPanelExpanded) {
+//                if (gestureIsDraggingFromBottomtoTop) {
+//                    if currentView == .Temperatures {
+//                        animateTopPanelTemps(shouldExpand: false)
+//                    }
+//                    else if currentView == .Graphs {
+//                        animateTopPanelGraph(shouldExpand: false)
+//                    }
+//                    else if currentView == .Settings {
+//                        animateTopPanelSetting(shouldExpand: false)
+//                    }
+//                }
+//            }
             
         case .Changed:
             if gestureIsDraggingFromToptoBottom {
@@ -157,6 +189,7 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
                 }
             }
             else if gestureIsDraggingFromBottomtoTop {
+                if currentState == .TopPanelCollapsed {break}
                 if currentView == .Temperatures {
                     if recognizer.translationInView(view).y < 150 {
                         tempViewController.view.center.y = tempViewController.view.center.y - recognizer.translationInView(view).y
@@ -205,6 +238,7 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
                 }
             }
             else if gestureIsDraggingFromBottomtoTop {
+                if currentState == .TopPanelCollapsed {break}
                 if (tempViewController != nil) && (topPanelViewController != nil){
                     animateTopPanelTemps(shouldExpand: false)
                 } else if (graphViewController != nil) && (topPanelViewController != nil) {
