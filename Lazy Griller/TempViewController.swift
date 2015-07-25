@@ -191,13 +191,21 @@ class TempViewController: UIViewController {
         var probe1reading = Int(round(RecentReading.sharedInstance.getLastTemp(1)!))
         var probe1readingString = String(probe1reading)
         if var label = probe1Label {
-            label.setTitle(probe1readingString, forState: .Normal)
+            if probe1readingString == "0" {label.setTitle("?", forState: .Normal)}
+            else
+            {
+                label.setTitle(probe1readingString, forState: .Normal)
+            }
         }
         
         var probe2reading = Int(round(RecentReading.sharedInstance.getLastTemp(2)!))
         var probe2readingString = String(probe2reading)
         if var label = probe2Label {
-            label.setTitle(probe2readingString, forState: .Normal)
+            if probe2readingString == "0" {label.setTitle("?", forState: .Normal)}
+            else
+            {
+                label.setTitle(probe2readingString, forState: .Normal)
+            }
         }
     }
     
