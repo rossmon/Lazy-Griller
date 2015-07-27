@@ -128,11 +128,13 @@ class TempViewController: UIViewController {
     var p2Time: NSDate?
     
     var probeSelected: Int = 1
-    var defaultAlarmTemp = 200
     
     var audioPlayer = AVAudioPlayer()
     var soundID:SystemSoundID = 0
     var alertOpen = false
+    
+    var alarm1Delay = false
+    var alarm2Delay = false
     
     var alarmViewController: AlarmViewController!
     
@@ -221,7 +223,7 @@ class TempViewController: UIViewController {
         }
 
         
-        if Alarms.sharedInstance.alarm1IsOn() {
+        if Alarms.sharedInstance.alarm1IsOn() && !Alarms.sharedInstance.alarmDelayIsOn(1){
             if let recReading = RecentReading.sharedInstance.getLastTemp(1) {
                 if recReading >= Double(Alarms.sharedInstance.getAlarm1Temp()) {
                     if !alertOpen {
@@ -240,14 +242,18 @@ class TempViewController: UIViewController {
                         alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: handler))
                         
                         self.presentViewController(alertController, animated: true, completion: nil)
-                        alertOpen = true
+                        Alarms.sharedInstance.setAlarmOpen(true)
+                        
+                        Alarms.sharedInstance.turnAlarmDelayOn(1)
+                        
+                        NSTimer.scheduledTimerWithTimeInterval(30.0, target: self, selector: Selector("startProbe1Timer"), userInfo: nil, repeats: false)
 
                     }
                 }
             }
         }
         
-        if Alarms.sharedInstance.alarm2IsOn() {
+        if Alarms.sharedInstance.alarm2IsOn() && !Alarms.sharedInstance.alarmDelayIsOn(2) {
             if let recReading = RecentReading.sharedInstance.getLastTemp(2) {
                 if recReading >= Double(Alarms.sharedInstance.getAlarm2Temp()) {
                     if !alertOpen {
@@ -266,7 +272,11 @@ class TempViewController: UIViewController {
                         alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: handler))
                         
                         self.presentViewController(alertController, animated: true, completion: nil)
-                        alertOpen = true
+                        Alarms.sharedInstance.setAlarmOpen(true)
+                        
+                        Alarms.sharedInstance.turnAlarmDelayOn(2)
+                        
+                        NSTimer.scheduledTimerWithTimeInterval(30.0, target: self, selector: Selector("startProbe2Timer"), userInfo: nil, repeats: false)
                         
                     }
                 }
@@ -281,8 +291,13 @@ class TempViewController: UIViewController {
         alertOpen = false
     }
     
+    func startProbe1Timer() {
+        Alarms.sharedInstance.turnAlarmDelayOff(1)
+    }
     
-        
+    func startProbe2Timer() {
+        Alarms.sharedInstance.turnAlarmDelayOff(2)
+    }
 }
 
 

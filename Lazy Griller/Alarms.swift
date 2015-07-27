@@ -10,10 +10,13 @@ import Foundation
 
 class Alarms {
     
-    private var probe1Alarm: Int = 135
+    private var probe1Alarm: Int = 200
     private var probe2Alarm: Int = 200
     private var probe1AlarmOn: Bool = false
     private var probe2AlarmOn: Bool = false
+    private var alertOpen: Bool = false
+    private var alarm1Delay: Bool = false
+    private var alarm2Delay: Bool = false
     
     class var sharedInstance : Alarms {
         struct Static {
@@ -86,5 +89,35 @@ class Alarms {
     func turnOffProbe2Alarm() {
         probe2AlarmOn = false
     }
+    
+    func setAlarmOpen(alarmStatus: Bool) {
+        alertOpen = alarmStatus
+    }
+    func turnAlarmDelayOn(probe: Int) {
+        if probe == 1 {
+            alarm1Delay = true
+        }
+        else {
+            alarm2Delay = true
+        }
+    }
+    func turnAlarmDelayOff(probe: Int) {
+        if probe == 1 {
+            alarm1Delay = false
+        }
+        else {
+            alarm2Delay = false
+        }
+    }
+    func alarmDelayIsOn(probe: Int) -> Bool {
+        if probe == 1 {
+            return alarm1Delay
+        }
+        else {
+            return alarm2Delay
+        }
+    }
+    
+    
     
 }
