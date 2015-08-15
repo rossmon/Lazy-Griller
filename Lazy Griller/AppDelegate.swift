@@ -38,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         defaults.setDouble(RecentReading.sharedInstance.getLastTemp(1)!, forKey: "probe1LastTemp")
         defaults.setDouble(RecentReading.sharedInstance.getLastTemp(2)!, forKey: "probe2LastTemp")
+        defaults.setObject(Settings.sharedInstance.getDeviceName(), forKey: "deviceName")
 
     }
     
@@ -50,6 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if defaults.boolForKey("probe2Alarm") {Alarms.sharedInstance.turnOnProbe2Alarm()}
         RecentReading.sharedInstance.setLastTemp(1, temp: defaults.doubleForKey("probe1LastTemp"))
         RecentReading.sharedInstance.setLastTemp(2, temp: defaults.doubleForKey("probe2LastTemp"))
+        
+        Settings.sharedInstance.setDeviceName(defaults.objectForKey("deviceName") as! String)
     }
     
     func applicationDidBecomeActive(application: UIApplication) {
@@ -73,6 +76,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         defaults.setDouble(RecentReading.sharedInstance.getLastTemp(2)!, forKey: "probe2LastTemp")
         RecentReading.sharedInstance.setLastTemp(1, temp: defaults.doubleForKey("probe1LastTemp"))
         RecentReading.sharedInstance.setLastTemp(2, temp: defaults.doubleForKey("probe2LastTemp"))
+        
+        defaults.setObject(Settings.sharedInstance.getDeviceName(), forKey: "deviceName")
     }
     
 }

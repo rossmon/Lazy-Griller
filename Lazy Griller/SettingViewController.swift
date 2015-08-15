@@ -112,6 +112,8 @@ extension SettingViewController: DeviceSettingsViewControllerDelegate {
             self.deviceSettingsViewController!.view.removeFromSuperview()
             self.deviceSettingsViewController = nil
         }
+        
+        self.tableView.deselectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: false)
     }
 }
 

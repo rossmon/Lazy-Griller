@@ -49,6 +49,7 @@
 		91A8BEA21B534DE300826815 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A8BEA11B534DE300826815 /* SettingViewController.swift */; };
 		91A8BEA41B5352D300826815 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A8BEA31B5352D300826815 /* GraphView.swift */; };
 		91A8BEA61B535BE600826815 /* RecentReadings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A8BEA51B535BE600826815 /* RecentReadings.swift */; };
+		91EB52911B7ED18400631807 /* TextEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EB52901B7ED18400631807 /* TextEntryViewController.swift */; };
 		91F751691B685D8C007D1929 /* Forward-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 91F751681B685D8C007D1929 /* Forward-50.png */; };
 		91F7516B1B686C7C007D1929 /* DeviceSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F7516A1B686C7C007D1929 /* DeviceSettingsViewController.swift */; };
 		91F7516D1B686FF0007D1929 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F7516C1B686FF0007D1929 /* Settings.swift */; };
@@ -144,6 +145,7 @@
 		91A8BEA11B534DE300826815 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		91A8BEA31B5352D300826815 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		91A8BEA51B535BE600826815 /* RecentReadings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentReadings.swift; sourceTree = "<group>"; };
+		91EB52901B7ED18400631807 /* TextEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEntryViewController.swift; sourceTree = "<group>"; };
 		91F751681B685D8C007D1929 /* Forward-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Forward-50.png"; sourceTree = "<group>"; };
 		91F7516A1B686C7C007D1929 /* DeviceSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSettingsViewController.swift; sourceTree = "<group>"; };
 		91F7516C1B686FF0007D1929 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				91A8BEA31B5352D300826815 /* GraphView.swift */,
 				91A8BEA11B534DE300826815 /* SettingViewController.swift */,
 				91F7516A1B686C7C007D1929 /* DeviceSettingsViewController.swift */,
+				91EB52901B7ED18400631807 /* TextEntryViewController.swift */,
 				9180A8761B50362600C1CFB9 /* TopPanelViewController.swift */,
 				9180A8781B531EF600C1CFB9 /* TempReading.swift */,
 				91A8BEA51B535BE600826815 /* RecentReadings.swift */,
@@ -518,6 +521,7 @@
 				91F7516D1B686FF0007D1929 /* Settings.swift in Sources */,
 				9180A8791B531EF600C1CFB9 /* TempReading.swift in Sources */,
 				91A797AD1B4F4372001D5448 /* TempViewController.swift in Sources */,
+				91EB52911B7ED18400631807 /* TextEntryViewController.swift in Sources */,
 				9180A8771B50362600C1CFB9 /* TopPanelViewController.swift in Sources */,
 				9180A87D1B5331D100C1CFB9 /* GraphViewController.swift in Sources */,
 				9101D1D01B5DB0D100454A93 /* AlarmViewController.swift in Sources */,

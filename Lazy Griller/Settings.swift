@@ -24,7 +24,7 @@ class Settings {
         self.deviceName = deviceName
     }
     init() {
-        self.deviceName = "Default Name"
+        self.deviceName = ""
     }
     
     func getDeviceName() -> String {
